@@ -29,3 +29,6 @@ jobs:
 
   - script: cargo build
     displayName: Debug build
+
+  - script: cargo build --release
+    displayName: Release build
