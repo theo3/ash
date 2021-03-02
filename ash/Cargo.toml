@@ -12,6 +12,7 @@ edition = "2018"
 
 [dependencies]
 libloading = { version = "0.7", optional = true }
+num = "0.4"
 
 [features]
 default = ["libloading"]
