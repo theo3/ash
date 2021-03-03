@@ -145,7 +145,7 @@ impl BufferCreateFlags {
     pub const SPARSE_BINDING: Self = Self(0b1);
     #[doc = "Buffer should support sparse backing with partial residency"]
     pub const SPARSE_RESIDENCY: Self = Self(0b10);
-    #[doc = "Buffer should support constent data access to physical memory ranges mapped into multiple locations of sparse buffers"]
+    #[doc = "Buffer should support constant data access to physical memory ranges mapped into multiple locations of sparse buffers"]
     pub const SPARSE_ALIASED: Self = Self(0b100);
 }
 #[repr(transparent)]
@@ -200,7 +200,7 @@ impl ImageCreateFlags {
     pub const SPARSE_BINDING: Self = Self(0b1);
     #[doc = "Image should support sparse backing with partial residency"]
     pub const SPARSE_RESIDENCY: Self = Self(0b10);
-    #[doc = "Image should support constent data access to physical memory ranges mapped into multiple locations of sparse images"]
+    #[doc = "Image should support constant data access to physical memory ranges mapped into multiple locations of sparse images"]
     pub const SPARSE_ALIASED: Self = Self(0b100);
     #[doc = "Allows image views to have different format than the base image"]
     pub const MUTABLE_FORMAT: Self = Self(0b1000);
@@ -961,3 +961,92 @@ impl ToolPurposeFlagsEXT {
     pub const ADDITIONAL_FEATURES: Self = Self(0b1000);
     pub const MODIFYING_FEATURES: Self = Self(0b1_0000);
 }
+#[repr(transparent)]
+#[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
+#[doc = "<https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccessFlagBits2KHR.html>"]
+pub struct AccessFlags2KHR(pub(crate) Flags64);
+vk_bitflags_wrapped!(
+    AccessFlags2KHR,
+    0b111_0000_0000_0000_0001_1111_1111_1111_1111,
+    Flags64
+);
+impl AccessFlags2KHR {
+    pub const ACCESS_2_NONE: Self = Self(0);
+    pub const ACCESS_2_INDIRECT_COMMAND_READ: Self = Self(0b1);
+    pub const ACCESS_2_INDEX_READ: Self = Self(0b10);
+    pub const ACCESS_2_VERTEX_ATTRIBUTE_READ: Self = Self(0b100);
+    pub const ACCESS_2_UNIFORM_READ: Self = Self(0b1000);
+    pub const ACCESS_2_INPUT_ATTACHMENT_READ: Self = Self(0b1_0000);
+    pub const ACCESS_2_SHADER_READ: Self = Self(0b10_0000);
+    pub const ACCESS_2_SHADER_WRITE: Self = Self(0b100_0000);
+    pub const ACCESS_2_COLOR_ATTACHMENT_READ: Self = Self(0b1000_0000);
+    pub const ACCESS_2_COLOR_ATTACHMENT_WRITE: Self = Self(0b1_0000_0000);
+    pub const ACCESS_2_DEPTH_STENCIL_ATTACHMENT_READ: Self = Self(0b10_0000_0000);
+    pub const ACCESS_2_DEPTH_STENCIL_ATTACHMENT_WRITE: Self = Self(0b100_0000_0000);
+    pub const ACCESS_2_TRANSFER_READ: Self = Self(0b1000_0000_0000);
+    pub const ACCESS_2_TRANSFER_WRITE: Self = Self(0b1_0000_0000_0000);
+    pub const ACCESS_2_HOST_READ: Self = Self(0b10_0000_0000_0000);
+    pub const ACCESS_2_HOST_WRITE: Self = Self(0b100_0000_0000_0000);
+    pub const ACCESS_2_MEMORY_READ: Self = Self(0b1000_0000_0000_0000);
+    pub const ACCESS_2_MEMORY_WRITE: Self = Self(0b1_0000_0000_0000_0000);
+    pub const ACCESS_2_SHADER_SAMPLED_READ: Self =
+        Self(0b1_0000_0000_0000_0000_0000_0000_0000_0000);
+    pub const ACCESS_2_SHADER_STORAGE_READ: Self =
+        Self(0b10_0000_0000_0000_0000_0000_0000_0000_0000);
+    pub const ACCESS_2_SHADER_STORAGE_WRITE: Self =
+        Self(0b100_0000_0000_0000_0000_0000_0000_0000_0000);
+}
+#[repr(transparent)]
+#[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
+#[doc = "<https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineStageFlagBits2KHR.html>"]
+pub struct PipelineStageFlags2KHR(pub(crate) Flags64);
+vk_bitflags_wrapped!(
+    PipelineStageFlags2KHR,
+    0b111_1111_0000_0000_0000_0001_1111_1111_1111_1111,
+    Flags64
+);
+impl PipelineStageFlags2KHR {
+    pub const PIPELINE_STAGE_2_NONE: Self = Self(0);
+    pub const PIPELINE_STAGE_2_TOP_OF_PIPE: Self = Self(0b1);
+    pub const PIPELINE_STAGE_2_DRAW_INDIRECT: Self = Self(0b10);
+    pub const PIPELINE_STAGE_2_VERTEX_INPUT: Self = Self(0b100);
+    pub const PIPELINE_STAGE_2_VERTEX_SHADER: Self = Self(0b1000);
+    pub const PIPELINE_STAGE_2_TESSELLATION_CONTROL_SHADER: Self = Self(0b1_0000);
+    pub const PIPELINE_STAGE_2_TESSELLATION_EVALUATION_SHADER: Self = Self(0b10_0000);
+    pub const PIPELINE_STAGE_2_GEOMETRY_SHADER: Self = Self(0b100_0000);
+    pub const PIPELINE_STAGE_2_FRAGMENT_SHADER: Self = Self(0b1000_0000);
+    pub const PIPELINE_STAGE_2_EARLY_FRAGMENT_TESTS: Self = Self(0b1_0000_0000);
+    pub const PIPELINE_STAGE_2_LATE_FRAGMENT_TESTS: Self = Self(0b10_0000_0000);
+    pub const PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT: Self = Self(0b100_0000_0000);
+    pub const PIPELINE_STAGE_2_COMPUTE_SHADER: Self = Self(0b1000_0000_0000);
+    pub const PIPELINE_STAGE_2_ALL_TRANSFER: Self = Self(0b1_0000_0000_0000);
+    pub const PIPELINE_STAGE_2_TRANSFER: Self = Self::PIPELINE_STAGE_2_ALL_TRANSFER;
+    pub const PIPELINE_STAGE_2_BOTTOM_OF_PIPE: Self = Self(0b10_0000_0000_0000);
+    pub const PIPELINE_STAGE_2_HOST: Self = Self(0b100_0000_0000_0000);
+    pub const PIPELINE_STAGE_2_ALL_GRAPHICS: Self = Self(0b1000_0000_0000_0000);
+    pub const PIPELINE_STAGE_2_ALL_COMMANDS: Self = Self(0b1_0000_0000_0000_0000);
+    pub const PIPELINE_STAGE_2_COPY: Self = Self(0b1_0000_0000_0000_0000_0000_0000_0000_0000);
+    pub const PIPELINE_STAGE_2_RESOLVE: Self = Self(0b10_0000_0000_0000_0000_0000_0000_0000_0000);
+    pub const PIPELINE_STAGE_2_BLIT: Self = Self(0b100_0000_0000_0000_0000_0000_0000_0000_0000);
+    pub const PIPELINE_STAGE_2_CLEAR: Self = Self(0b1000_0000_0000_0000_0000_0000_0000_0000_0000);
+    pub const PIPELINE_STAGE_2_INDEX_INPUT: Self =
+        Self(0b1_0000_0000_0000_0000_0000_0000_0000_0000_0000);
+    pub const PIPELINE_STAGE_2_VERTEX_ATTRIBUTE_INPUT: Self =
+        Self(0b10_0000_0000_0000_0000_0000_0000_0000_0000_0000);
+    pub const PIPELINE_STAGE_2_PRE_RASTERIZATION_SHADERS: Self =
+        Self(0b100_0000_0000_0000_0000_0000_0000_0000_0000_0000);
+}
+#[repr(transparent)]
+#[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
+#[doc = "<https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubmitFlagBitsKHR.html>"]
+pub struct SubmitFlagsKHR(pub(crate) Flags);
+vk_bitflags_wrapped!(SubmitFlagsKHR, 0b1, Flags);
+impl SubmitFlagsKHR {
+    pub const PROTECTED: Self = Self(0b1);
+}
+#[repr(transparent)]
+#[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
+#[doc = "<https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkEventCreateFlagBits.html>"]
+pub struct EventCreateFlags(pub(crate) Flags);
+vk_bitflags_wrapped!(EventCreateFlags, 0b0, Flags);
+impl EventCreateFlags {}

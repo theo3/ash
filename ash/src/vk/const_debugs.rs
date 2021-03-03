@@ -2,24 +2,32 @@ use crate::vk::bitflags::*;
 use crate::vk::definitions::*;
 use crate::vk::enums::*;
 use std::fmt;
-pub(crate) fn debug_flags(
+pub(crate) fn debug_flags<
+    T: Copy
+        + fmt::Binary
+        + num::Num
+        + PartialEq
+        + std::ops::BitAnd<Output = T>
+        + std::ops::BitAndAssign
+        + std::ops::Not<Output = T>,
+>(
     f: &mut fmt::Formatter,
-    known: &[(Flags, &'static str)],
-    value: Flags,
+    known: &[(T, &'static str)],
+    value: T,
 ) -> fmt::Result {
     let mut first = true;
     let mut accum = value;
     for (bit, name) in known {
-        if *bit != 0 && accum & *bit == *bit {
+        if !bit.is_zero() && accum & *bit == *bit {
             if !first {
                 f.write_str(" | ")?;
             }
             f.write_str(name)?;
             first = false;
-            accum &= !bit;
+            accum &= !*bit;
         }
     }
-    if accum != 0 {
+    if !accum.is_zero() {
         if !first {
             f.write_str(" | ")?;
         }
@@ -188,6 +196,136 @@ impl fmt::Debug for AccessFlags {
             (
                 AccessFlags::COMMAND_PREPROCESS_WRITE_NV.0,
                 "COMMAND_PREPROCESS_WRITE_NV",
+            ),
+            (AccessFlags::NONE_KHR.0, "NONE_KHR"),
+        ];
+        debug_flags(f, KNOWN, self.0)
+    }
+}
+impl fmt::Debug for AccessFlags2KHR {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        const KNOWN: &[(Flags64, &str)] = &[
+            (AccessFlags2KHR::ACCESS_2_NONE.0, "ACCESS_2_NONE"),
+            (
+                AccessFlags2KHR::ACCESS_2_INDIRECT_COMMAND_READ.0,
+                "ACCESS_2_INDIRECT_COMMAND_READ",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_INDEX_READ.0,
+                "ACCESS_2_INDEX_READ",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_VERTEX_ATTRIBUTE_READ.0,
+                "ACCESS_2_VERTEX_ATTRIBUTE_READ",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_UNIFORM_READ.0,
+                "ACCESS_2_UNIFORM_READ",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_INPUT_ATTACHMENT_READ.0,
+                "ACCESS_2_INPUT_ATTACHMENT_READ",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_SHADER_READ.0,
+                "ACCESS_2_SHADER_READ",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_SHADER_WRITE.0,
+                "ACCESS_2_SHADER_WRITE",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_COLOR_ATTACHMENT_READ.0,
+                "ACCESS_2_COLOR_ATTACHMENT_READ",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_COLOR_ATTACHMENT_WRITE.0,
+                "ACCESS_2_COLOR_ATTACHMENT_WRITE",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_DEPTH_STENCIL_ATTACHMENT_READ.0,
+                "ACCESS_2_DEPTH_STENCIL_ATTACHMENT_READ",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_DEPTH_STENCIL_ATTACHMENT_WRITE.0,
+                "ACCESS_2_DEPTH_STENCIL_ATTACHMENT_WRITE",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_TRANSFER_READ.0,
+                "ACCESS_2_TRANSFER_READ",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_TRANSFER_WRITE.0,
+                "ACCESS_2_TRANSFER_WRITE",
+            ),
+            (AccessFlags2KHR::ACCESS_2_HOST_READ.0, "ACCESS_2_HOST_READ"),
+            (
+                AccessFlags2KHR::ACCESS_2_HOST_WRITE.0,
+                "ACCESS_2_HOST_WRITE",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_MEMORY_READ.0,
+                "ACCESS_2_MEMORY_READ",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_MEMORY_WRITE.0,
+                "ACCESS_2_MEMORY_WRITE",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_SHADER_SAMPLED_READ.0,
+                "ACCESS_2_SHADER_SAMPLED_READ",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_SHADER_STORAGE_READ.0,
+                "ACCESS_2_SHADER_STORAGE_READ",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_SHADER_STORAGE_WRITE.0,
+                "ACCESS_2_SHADER_STORAGE_WRITE",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_TRANSFORM_FEEDBACK_WRITE_EXT.0,
+                "ACCESS_2_TRANSFORM_FEEDBACK_WRITE_EXT",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_TRANSFORM_FEEDBACK_COUNTER_READ_EXT.0,
+                "ACCESS_2_TRANSFORM_FEEDBACK_COUNTER_READ_EXT",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT.0,
+                "ACCESS_2_TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_CONDITIONAL_RENDERING_READ_EXT.0,
+                "ACCESS_2_CONDITIONAL_RENDERING_READ_EXT",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_COMMAND_PREPROCESS_READ_NV.0,
+                "ACCESS_2_COMMAND_PREPROCESS_READ_NV",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_COMMAND_PREPROCESS_WRITE_NV.0,
+                "ACCESS_2_COMMAND_PREPROCESS_WRITE_NV",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_FRAGMENT_SHADING_RATE_ATTACHMENT_READ.0,
+                "ACCESS_2_FRAGMENT_SHADING_RATE_ATTACHMENT_READ",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_ACCELERATION_STRUCTURE_READ.0,
+                "ACCESS_2_ACCELERATION_STRUCTURE_READ",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_ACCELERATION_STRUCTURE_WRITE.0,
+                "ACCESS_2_ACCELERATION_STRUCTURE_WRITE",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_FRAGMENT_DENSITY_MAP_READ_EXT.0,
+                "ACCESS_2_FRAGMENT_DENSITY_MAP_READ_EXT",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_COLOR_ATTACHMENT_READ_NONCOHERENT_EXT.0,
+                "ACCESS_2_COLOR_ATTACHMENT_READ_NONCOHERENT_EXT",
             ),
         ];
         debug_flags(f, KNOWN, self.0)
@@ -1227,7 +1365,7 @@ impl fmt::Debug for DynamicState {
 }
 impl fmt::Debug for EventCreateFlags {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        const KNOWN: &[(Flags, &str)] = &[];
+        const KNOWN: &[(Flags, &str)] = &[(EventCreateFlags::DEVICE_ONLY_KHR.0, "DEVICE_ONLY_KHR")];
         debug_flags(f, KNOWN, self.0)
     }
 }
@@ -1956,6 +2094,8 @@ impl fmt::Debug for ImageLayout {
             Self::SHARED_PRESENT_KHR => Some("SHARED_PRESENT_KHR"),
             Self::SHADING_RATE_OPTIMAL_NV => Some("SHADING_RATE_OPTIMAL_NV"),
             Self::FRAGMENT_DENSITY_MAP_OPTIMAL_EXT => Some("FRAGMENT_DENSITY_MAP_OPTIMAL_EXT"),
+            Self::READ_ONLY_OPTIMAL_KHR => Some("READ_ONLY_OPTIMAL_KHR"),
+            Self::ATTACHMENT_OPTIMAL_KHR => Some("ATTACHMENT_OPTIMAL_KHR"),
             Self::DEPTH_READ_ONLY_STENCIL_ATTACHMENT_OPTIMAL => {
                 Some("DEPTH_READ_ONLY_STENCIL_ATTACHMENT_OPTIMAL")
             }
@@ -2638,6 +2778,7 @@ impl fmt::Debug for PipelineCreateFlags {
                 PipelineCreateFlags::EARLY_RETURN_ON_FAILURE_EXT.0,
                 "EARLY_RETURN_ON_FAILURE_EXT",
             ),
+            (PipelineCreateFlags::RESERVED_20_NV.0, "RESERVED_20_NV"),
             (
                 PipelineCreateFlags::VIEW_INDEX_FROM_DEVICE_INDEX.0,
                 "VIEW_INDEX_FROM_DEVICE_INDEX",
@@ -2828,6 +2969,150 @@ impl fmt::Debug for PipelineStageFlags {
             (
                 PipelineStageFlags::COMMAND_PREPROCESS_NV.0,
                 "COMMAND_PREPROCESS_NV",
+            ),
+            (PipelineStageFlags::NONE_KHR.0, "NONE_KHR"),
+        ];
+        debug_flags(f, KNOWN, self.0)
+    }
+}
+impl fmt::Debug for PipelineStageFlags2KHR {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        const KNOWN: &[(Flags64, &str)] = &[
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_NONE.0,
+                "PIPELINE_STAGE_2_NONE",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_TOP_OF_PIPE.0,
+                "PIPELINE_STAGE_2_TOP_OF_PIPE",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_DRAW_INDIRECT.0,
+                "PIPELINE_STAGE_2_DRAW_INDIRECT",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_VERTEX_INPUT.0,
+                "PIPELINE_STAGE_2_VERTEX_INPUT",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_VERTEX_SHADER.0,
+                "PIPELINE_STAGE_2_VERTEX_SHADER",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_TESSELLATION_CONTROL_SHADER.0,
+                "PIPELINE_STAGE_2_TESSELLATION_CONTROL_SHADER",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_TESSELLATION_EVALUATION_SHADER.0,
+                "PIPELINE_STAGE_2_TESSELLATION_EVALUATION_SHADER",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_GEOMETRY_SHADER.0,
+                "PIPELINE_STAGE_2_GEOMETRY_SHADER",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_FRAGMENT_SHADER.0,
+                "PIPELINE_STAGE_2_FRAGMENT_SHADER",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_EARLY_FRAGMENT_TESTS.0,
+                "PIPELINE_STAGE_2_EARLY_FRAGMENT_TESTS",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_LATE_FRAGMENT_TESTS.0,
+                "PIPELINE_STAGE_2_LATE_FRAGMENT_TESTS",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT.0,
+                "PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_COMPUTE_SHADER.0,
+                "PIPELINE_STAGE_2_COMPUTE_SHADER",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_ALL_TRANSFER.0,
+                "PIPELINE_STAGE_2_ALL_TRANSFER",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_BOTTOM_OF_PIPE.0,
+                "PIPELINE_STAGE_2_BOTTOM_OF_PIPE",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_HOST.0,
+                "PIPELINE_STAGE_2_HOST",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_ALL_GRAPHICS.0,
+                "PIPELINE_STAGE_2_ALL_GRAPHICS",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_ALL_COMMANDS.0,
+                "PIPELINE_STAGE_2_ALL_COMMANDS",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_COPY.0,
+                "PIPELINE_STAGE_2_COPY",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_RESOLVE.0,
+                "PIPELINE_STAGE_2_RESOLVE",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_BLIT.0,
+                "PIPELINE_STAGE_2_BLIT",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_CLEAR.0,
+                "PIPELINE_STAGE_2_CLEAR",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_INDEX_INPUT.0,
+                "PIPELINE_STAGE_2_INDEX_INPUT",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_VERTEX_ATTRIBUTE_INPUT.0,
+                "PIPELINE_STAGE_2_VERTEX_ATTRIBUTE_INPUT",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_PRE_RASTERIZATION_SHADERS.0,
+                "PIPELINE_STAGE_2_PRE_RASTERIZATION_SHADERS",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_TRANSFORM_FEEDBACK_EXT.0,
+                "PIPELINE_STAGE_2_TRANSFORM_FEEDBACK_EXT",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_CONDITIONAL_RENDERING_EXT.0,
+                "PIPELINE_STAGE_2_CONDITIONAL_RENDERING_EXT",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_COMMAND_PREPROCESS_NV.0,
+                "PIPELINE_STAGE_2_COMMAND_PREPROCESS_NV",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_FRAGMENT_SHADING_RATE_ATTACHMENT.0,
+                "PIPELINE_STAGE_2_FRAGMENT_SHADING_RATE_ATTACHMENT",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_ACCELERATION_STRUCTURE_BUILD.0,
+                "PIPELINE_STAGE_2_ACCELERATION_STRUCTURE_BUILD",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_RAY_TRACING_SHADER.0,
+                "PIPELINE_STAGE_2_RAY_TRACING_SHADER",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_FRAGMENT_DENSITY_PROCESS_EXT.0,
+                "PIPELINE_STAGE_2_FRAGMENT_DENSITY_PROCESS_EXT",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_TASK_SHADER_NV.0,
+                "PIPELINE_STAGE_2_TASK_SHADER_NV",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_MESH_SHADER_NV.0,
+                "PIPELINE_STAGE_2_MESH_SHADER_NV",
             ),
         ];
         debug_flags(f, KNOWN, self.0)
@@ -4282,6 +4567,20 @@ impl fmt::Debug for StructureType {
                 Some("DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV")
             }
             Self::RESERVED_QCOM => Some("RESERVED_QCOM"),
+            Self::MEMORY_BARRIER_2_KHR => Some("MEMORY_BARRIER_2_KHR"),
+            Self::BUFFER_MEMORY_BARRIER_2_KHR => Some("BUFFER_MEMORY_BARRIER_2_KHR"),
+            Self::IMAGE_MEMORY_BARRIER_2_KHR => Some("IMAGE_MEMORY_BARRIER_2_KHR"),
+            Self::DEPENDENCY_INFO_KHR => Some("DEPENDENCY_INFO_KHR"),
+            Self::SUBMIT_INFO_2_KHR => Some("SUBMIT_INFO_2_KHR"),
+            Self::SEMAPHORE_SUBMIT_INFO_KHR => Some("SEMAPHORE_SUBMIT_INFO_KHR"),
+            Self::COMMAND_BUFFER_SUBMIT_INFO_KHR => Some("COMMAND_BUFFER_SUBMIT_INFO_KHR"),
+            Self::PHYSICAL_DEVICE_SYNCHRONIZATION_2_FEATURES_KHR => {
+                Some("PHYSICAL_DEVICE_SYNCHRONIZATION_2_FEATURES_KHR")
+            }
+            Self::QUEUE_FAMILY_CHECKPOINT_PROPERTIES_2_NV => {
+                Some("QUEUE_FAMILY_CHECKPOINT_PROPERTIES_2_NV")
+            }
+            Self::CHECKPOINT_DATA_2_NV => Some("CHECKPOINT_DATA_2_NV"),
             Self::PHYSICAL_DEVICE_ZERO_INITIALIZE_WORKGROUP_MEMORY_FEATURES_KHR => {
                 Some("PHYSICAL_DEVICE_ZERO_INITIALIZE_WORKGROUP_MEMORY_FEATURES_KHR")
             }
@@ -4586,6 +4885,12 @@ impl fmt::Debug for SubgroupFeatureFlags {
             (SubgroupFeatureFlags::QUAD.0, "QUAD"),
             (SubgroupFeatureFlags::PARTITIONED_NV.0, "PARTITIONED_NV"),
         ];
+        debug_flags(f, KNOWN, self.0)
+    }
+}
+impl fmt::Debug for SubmitFlagsKHR {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        const KNOWN: &[(Flags, &str)] = &[(SubmitFlagsKHR::PROTECTED.0, "PROTECTED")];
         debug_flags(f, KNOWN, self.0)
     }
 }
