@@ -150,9 +150,6 @@ impl fmt::Debug for AccessFlags {
             (AccessFlags::HOST_WRITE.0, "HOST_WRITE"),
             (AccessFlags::MEMORY_READ.0, "MEMORY_READ"),
             (AccessFlags::MEMORY_WRITE.0, "MEMORY_WRITE"),
-            (AccessFlags::RESERVED_30_KHR.0, "RESERVED_30_KHR"),
-            (AccessFlags::RESERVED_28_KHR.0, "RESERVED_28_KHR"),
-            (AccessFlags::RESERVED_29_KHR.0, "RESERVED_29_KHR"),
             (
                 AccessFlags::TRANSFORM_FEEDBACK_WRITE_EXT.0,
                 "TRANSFORM_FEEDBACK_WRITE_EXT",
@@ -282,6 +279,22 @@ impl fmt::Debug for AccessFlags2KHR {
             (
                 AccessFlags2KHR::ACCESS_2_SHADER_STORAGE_WRITE.0,
                 "ACCESS_2_SHADER_STORAGE_WRITE",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_RESERVED_READ_35.0,
+                "ACCESS_2_RESERVED_READ_35",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_RESERVED_WRITE_36.0,
+                "ACCESS_2_RESERVED_WRITE_36",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_RESERVED_READ_37.0,
+                "ACCESS_2_RESERVED_READ_37",
+            ),
+            (
+                AccessFlags2KHR::ACCESS_2_RESERVED_WRITE_38.0,
+                "ACCESS_2_RESERVED_WRITE_38",
             ),
             (
                 AccessFlags2KHR::ACCESS_2_TRANSFORM_FEEDBACK_WRITE_EXT.0,
@@ -1464,6 +1477,10 @@ impl fmt::Debug for ExternalMemoryHandleTypeFlags {
                 ExternalMemoryHandleTypeFlags::HOST_MAPPED_FOREIGN_MEMORY_EXT.0,
                 "HOST_MAPPED_FOREIGN_MEMORY_EXT",
             ),
+            (
+                ExternalMemoryHandleTypeFlags::ZIRCON_VMO_FUCHSIA.0,
+                "ZIRCON_VMO_FUCHSIA",
+            ),
         ];
         debug_flags(f, KNOWN, self.0)
     }
@@ -1517,6 +1534,10 @@ impl fmt::Debug for ExternalSemaphoreHandleTypeFlags {
                 "D3D12_FENCE",
             ),
             (ExternalSemaphoreHandleTypeFlags::SYNC_FD.0, "SYNC_FD"),
+            (
+                ExternalSemaphoreHandleTypeFlags::ZIRCON_EVENT_FUCHSIA.0,
+                "ZIRCON_EVENT_FUCHSIA",
+            ),
             (
                 ExternalSemaphoreHandleTypeFlags::RESERVED_5_NV.0,
                 "RESERVED_5_NV",
@@ -2938,8 +2959,6 @@ impl fmt::Debug for PipelineStageFlags {
             (PipelineStageFlags::HOST.0, "HOST"),
             (PipelineStageFlags::ALL_GRAPHICS.0, "ALL_GRAPHICS"),
             (PipelineStageFlags::ALL_COMMANDS.0, "ALL_COMMANDS"),
-            (PipelineStageFlags::RESERVED_27_KHR.0, "RESERVED_27_KHR"),
-            (PipelineStageFlags::RESERVED_26_KHR.0, "RESERVED_26_KHR"),
             (
                 PipelineStageFlags::TRANSFORM_FEEDBACK_EXT.0,
                 "TRANSFORM_FEEDBACK_EXT",
@@ -3077,6 +3096,14 @@ impl fmt::Debug for PipelineStageFlags2KHR {
             (
                 PipelineStageFlags2KHR::PIPELINE_STAGE_2_PRE_RASTERIZATION_SHADERS.0,
                 "PIPELINE_STAGE_2_PRE_RASTERIZATION_SHADERS",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_RESERVED_26.0,
+                "PIPELINE_STAGE_2_RESERVED_26",
+            ),
+            (
+                PipelineStageFlags2KHR::PIPELINE_STAGE_2_RESERVED_27.0,
+                "PIPELINE_STAGE_2_RESERVED_27",
             ),
             (
                 PipelineStageFlags2KHR::PIPELINE_STAGE_2_TRANSFORM_FEEDBACK_EXT.0,
@@ -4632,6 +4659,21 @@ impl fmt::Debug for StructureType {
             }
             Self::MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE => {
                 Some("MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE")
+            }
+            Self::IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA => {
+                Some("IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA")
+            }
+            Self::MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA => {
+                Some("MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA")
+            }
+            Self::MEMORY_GET_ZIRCON_HANDLE_INFO_FUCHSIA => {
+                Some("MEMORY_GET_ZIRCON_HANDLE_INFO_FUCHSIA")
+            }
+            Self::IMPORT_SEMAPHORE_ZIRCON_HANDLE_INFO_FUCHSIA => {
+                Some("IMPORT_SEMAPHORE_ZIRCON_HANDLE_INFO_FUCHSIA")
+            }
+            Self::SEMAPHORE_GET_ZIRCON_HANDLE_INFO_FUCHSIA => {
+                Some("SEMAPHORE_GET_ZIRCON_HANDLE_INFO_FUCHSIA")
             }
             Self::SCREEN_SURFACE_CREATE_INFO_QNX => Some("SCREEN_SURFACE_CREATE_INFO_QNX"),
             Self::PHYSICAL_DEVICE_SUBGROUP_PROPERTIES => {
