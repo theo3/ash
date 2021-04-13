@@ -1,6 +1,6 @@
 #![recursion_limit = "256"]
 
-use nom::{alt, char, do_parse, map, named, opt, tag, take_while1, terminated};
+use nom::{alt, do_parse, map, named, one_of, opt, tag, take_while1, terminated};
 use quote::*;
 
 use heck::{CamelCase, ShoutySnakeCase, SnakeCase};
@@ -77,7 +77,7 @@ named!(inverse_number<&str, (CType, String)>,
 );
 
 named!(cfloat<&str, f32>,
-    terminated!(nom::number::complete::float, char!('f'))
+    terminated!(nom::number::complete::float, one_of!("fF"))
 );
 
 fn khronos_link<S: Display + ?Sized>(name: &S) -> Literal {
