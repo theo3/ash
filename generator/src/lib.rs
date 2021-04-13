@@ -42,22 +42,26 @@ named!(ctype<&str, CType>,
     )
 );
 named!(cexpr<&str, (CType, String)>,
-       alt!(
-           map!(cfloat, |f| (CType::Float, format!("{:.2}", f))) |
-           inverse_number
-       )
+    alt!(
+        map!(cfloat, |f| (CType::Float, format!("{:.2}", f))) |
+        inverse_number
+    )
+);
+
+named!(cnumber<&str, &str>,
+    take_while1!(|c: char| c.is_digit(10))
 );
 
 named!(inverse_number<&str, (CType, String)>,
     do_parse!(
         tag!("(")>>
         tag!("~") >>
-        s: take_while1!(|c: char| c.is_digit(10)) >>
+        s: cnumber >>
         ctype: ctype >>
         minus_num: opt!(
             do_parse!(
                 tag!("-") >>
-                n: take_while1!(|c: char| c.is_digit(10)) >>
+                n: cnumber >>
                 (n)
             )
         ) >>
