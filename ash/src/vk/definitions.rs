@@ -3,6 +3,7 @@ use crate::vk::bitflags::*;
 use crate::vk::constants::*;
 use crate::vk::enums::*;
 use crate::vk::platform_types::*;
+use crate::vk::video::*;
 use crate::vk::{ptr_chain_iter, Handle};
 use std::fmt;
 use std::os::raw::*;

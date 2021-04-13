@@ -9,10 +9,14 @@ readme = "../README.md"
 keywords = ["vulkan", "graphic"]
 documentation = "https://docs.rs/ash"
 edition = "2018"
+build = "build.rs"
 
 [dependencies]
 libloading = { version = "0.7", optional = true }
 num = "0.4"
+
+[build-dependencies]
+bindgen = "0.58"
 
 [features]
 default = ["libloading"]

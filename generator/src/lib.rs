@@ -2615,6 +2615,11 @@ pub fn write_source_code<P: AsRef<Path>>(vk_xml: &Path, src_dir: P) {
                 Some(old)
             })
         }
+
+        #[allow(nonstandard_style, dead_code, clippy::redundant_static_lifetimes)]
+        mod video {
+            include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
+        }
     };
 
     let macros_code = quote! {
@@ -2663,6 +2668,7 @@ pub fn write_source_code<P: AsRef<Path>>(vk_xml: &Path, src_dir: P) {
         use crate::vk::bitflags::*;
         use crate::vk::constants::*;
         use crate::vk::enums::*;
+        use crate::vk::video::*;
         #(#definition_code)*
     };
 

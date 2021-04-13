@@ -40,6 +40,10 @@ pub(crate) unsafe fn ptr_chain_iter<T>(ptr: &mut T) -> impl Iterator<Item = *mut
         Some(old)
     })
 }
+#[allow(nonstandard_style, dead_code, clippy::redundant_static_lifetimes)]
+mod video {
+    include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
+}
 pub trait Handle {
     const TYPE: ObjectType;
     fn as_raw(self) -> u64;
