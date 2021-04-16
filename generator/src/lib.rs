@@ -1876,7 +1876,7 @@ pub fn derive_setters(
             extends
                 .split(',')
                 .filter(|extend| root_struct_names.contains(*extend))
-                .map(|extends| name_to_tokens(&format!("Extends{}", name_to_tokens(&extends))))
+                .map(|extends| format_ident!("Extends{}", name_to_tokens(&extends)))
                 .collect()
         })
         .unwrap_or_else(Vec::new);
@@ -1913,23 +1913,20 @@ pub fn derive_setters(
     };
 
     // Root structs come with their own trait that structs that extends this struct will
-    // implement
-    let next_trait = if has_next && _struct.extends.is_none() {
-        quote! {
-            pub unsafe trait #extends_name {
-            }
-        }
+    // implement.  However, root structs support nesting, for example video profiles are
+    // passed in VkVideoProfileKHR which itself is passed in another chain.
+    // TODO: Should these recursively extend?
+    let next_trait = if has_next {
+        quote!(pub unsafe trait #extends_name {})
     } else {
-        quote! {}
+        quote!()
     };
 
     // If the struct extends something we need to implement the trait.
     let impl_extend_trait = root_structs.iter().map(|extends| {
         quote! {
-            unsafe impl #extends for #name_builder<'_> {
-            }
-            unsafe impl #extends for #name {
-            }
+            unsafe impl #extends for #name_builder<'_> {}
+            unsafe impl #extends for #name {}
         }
     });
 

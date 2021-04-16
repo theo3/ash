@@ -10114,6 +10114,7 @@ pub struct DisplayPresentInfoKHRBuilder<'a> {
 }
 unsafe impl ExtendsPresentInfoKHR for DisplayPresentInfoKHRBuilder<'_> {}
 unsafe impl ExtendsPresentInfoKHR for DisplayPresentInfoKHR {}
+pub unsafe trait ExtendsDisplayPresentInfoKHR {}
 impl<'a> ::std::ops::Deref for DisplayPresentInfoKHRBuilder<'a> {
     type Target = DisplayPresentInfoKHR;
     fn deref(&self) -> &Self::Target {
@@ -11360,6 +11361,7 @@ pub struct DebugReportCallbackCreateInfoEXTBuilder<'a> {
 }
 unsafe impl ExtendsInstanceCreateInfo for DebugReportCallbackCreateInfoEXTBuilder<'_> {}
 unsafe impl ExtendsInstanceCreateInfo for DebugReportCallbackCreateInfoEXT {}
+pub unsafe trait ExtendsDebugReportCallbackCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for DebugReportCallbackCreateInfoEXTBuilder<'a> {
     type Target = DebugReportCallbackCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -11425,6 +11427,7 @@ pub struct ValidationFlagsEXTBuilder<'a> {
 }
 unsafe impl ExtendsInstanceCreateInfo for ValidationFlagsEXTBuilder<'_> {}
 unsafe impl ExtendsInstanceCreateInfo for ValidationFlagsEXT {}
+pub unsafe trait ExtendsValidationFlagsEXT {}
 impl<'a> ::std::ops::Deref for ValidationFlagsEXTBuilder<'a> {
     type Target = ValidationFlagsEXT;
     fn deref(&self) -> &Self::Target {
@@ -11490,6 +11493,7 @@ pub struct ValidationFeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsInstanceCreateInfo for ValidationFeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsInstanceCreateInfo for ValidationFeaturesEXT {}
+pub unsafe trait ExtendsValidationFeaturesEXT {}
 impl<'a> ::std::ops::Deref for ValidationFeaturesEXTBuilder<'a> {
     type Target = ValidationFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -11563,6 +11567,7 @@ unsafe impl ExtendsPipelineRasterizationStateCreateInfo
     for PipelineRasterizationStateRasterizationOrderAMD
 {
 }
+pub unsafe trait ExtendsPipelineRasterizationStateRasterizationOrderAMD {}
 impl<'a> ::std::ops::Deref for PipelineRasterizationStateRasterizationOrderAMDBuilder<'a> {
     type Target = PipelineRasterizationStateRasterizationOrderAMD;
     fn deref(&self) -> &Self::Target {
@@ -11861,6 +11866,7 @@ pub struct DedicatedAllocationImageCreateInfoNVBuilder<'a> {
 }
 unsafe impl ExtendsImageCreateInfo for DedicatedAllocationImageCreateInfoNVBuilder<'_> {}
 unsafe impl ExtendsImageCreateInfo for DedicatedAllocationImageCreateInfoNV {}
+pub unsafe trait ExtendsDedicatedAllocationImageCreateInfoNV {}
 impl<'a> ::std::ops::Deref for DedicatedAllocationImageCreateInfoNVBuilder<'a> {
     type Target = DedicatedAllocationImageCreateInfoNV;
     fn deref(&self) -> &Self::Target {
@@ -11916,6 +11922,7 @@ pub struct DedicatedAllocationBufferCreateInfoNVBuilder<'a> {
 }
 unsafe impl ExtendsBufferCreateInfo for DedicatedAllocationBufferCreateInfoNVBuilder<'_> {}
 unsafe impl ExtendsBufferCreateInfo for DedicatedAllocationBufferCreateInfoNV {}
+pub unsafe trait ExtendsDedicatedAllocationBufferCreateInfoNV {}
 impl<'a> ::std::ops::Deref for DedicatedAllocationBufferCreateInfoNVBuilder<'a> {
     type Target = DedicatedAllocationBufferCreateInfoNV;
     fn deref(&self) -> &Self::Target {
@@ -11973,6 +11980,7 @@ pub struct DedicatedAllocationMemoryAllocateInfoNVBuilder<'a> {
 }
 unsafe impl ExtendsMemoryAllocateInfo for DedicatedAllocationMemoryAllocateInfoNVBuilder<'_> {}
 unsafe impl ExtendsMemoryAllocateInfo for DedicatedAllocationMemoryAllocateInfoNV {}
+pub unsafe trait ExtendsDedicatedAllocationMemoryAllocateInfoNV {}
 impl<'a> ::std::ops::Deref for DedicatedAllocationMemoryAllocateInfoNVBuilder<'a> {
     type Target = DedicatedAllocationMemoryAllocateInfoNV;
     fn deref(&self) -> &Self::Target {
@@ -12101,6 +12109,7 @@ pub struct ExternalMemoryImageCreateInfoNVBuilder<'a> {
 }
 unsafe impl ExtendsImageCreateInfo for ExternalMemoryImageCreateInfoNVBuilder<'_> {}
 unsafe impl ExtendsImageCreateInfo for ExternalMemoryImageCreateInfoNV {}
+pub unsafe trait ExtendsExternalMemoryImageCreateInfoNV {}
 impl<'a> ::std::ops::Deref for ExternalMemoryImageCreateInfoNVBuilder<'a> {
     type Target = ExternalMemoryImageCreateInfoNV;
     fn deref(&self) -> &Self::Target {
@@ -12156,6 +12165,7 @@ pub struct ExportMemoryAllocateInfoNVBuilder<'a> {
 }
 unsafe impl ExtendsMemoryAllocateInfo for ExportMemoryAllocateInfoNVBuilder<'_> {}
 unsafe impl ExtendsMemoryAllocateInfo for ExportMemoryAllocateInfoNV {}
+pub unsafe trait ExtendsExportMemoryAllocateInfoNV {}
 impl<'a> ::std::ops::Deref for ExportMemoryAllocateInfoNVBuilder<'a> {
     type Target = ExportMemoryAllocateInfoNV;
     fn deref(&self) -> &Self::Target {
@@ -12213,6 +12223,7 @@ pub struct ImportMemoryWin32HandleInfoNVBuilder<'a> {
 }
 unsafe impl ExtendsMemoryAllocateInfo for ImportMemoryWin32HandleInfoNVBuilder<'_> {}
 unsafe impl ExtendsMemoryAllocateInfo for ImportMemoryWin32HandleInfoNV {}
+pub unsafe trait ExtendsImportMemoryWin32HandleInfoNV {}
 impl<'a> ::std::ops::Deref for ImportMemoryWin32HandleInfoNVBuilder<'a> {
     type Target = ImportMemoryWin32HandleInfoNV;
     fn deref(&self) -> &Self::Target {
@@ -12274,6 +12285,7 @@ pub struct ExportMemoryWin32HandleInfoNVBuilder<'a> {
 }
 unsafe impl ExtendsMemoryAllocateInfo for ExportMemoryWin32HandleInfoNVBuilder<'_> {}
 unsafe impl ExtendsMemoryAllocateInfo for ExportMemoryWin32HandleInfoNV {}
+pub unsafe trait ExtendsExportMemoryWin32HandleInfoNV {}
 impl<'a> ::std::ops::Deref for ExportMemoryWin32HandleInfoNVBuilder<'a> {
     type Target = ExportMemoryWin32HandleInfoNV;
     fn deref(&self) -> &Self::Target {
@@ -12347,6 +12359,7 @@ unsafe impl ExtendsSubmitInfo for Win32KeyedMutexAcquireReleaseInfoNVBuilder<'_>
 unsafe impl ExtendsSubmitInfo for Win32KeyedMutexAcquireReleaseInfoNV {}
 unsafe impl ExtendsSubmitInfo2KHR for Win32KeyedMutexAcquireReleaseInfoNVBuilder<'_> {}
 unsafe impl ExtendsSubmitInfo2KHR for Win32KeyedMutexAcquireReleaseInfoNV {}
+pub unsafe trait ExtendsWin32KeyedMutexAcquireReleaseInfoNV {}
 impl<'a> ::std::ops::Deref for Win32KeyedMutexAcquireReleaseInfoNVBuilder<'a> {
     type Target = Win32KeyedMutexAcquireReleaseInfoNV;
     fn deref(&self) -> &Self::Target {
@@ -12423,6 +12436,7 @@ pub struct PhysicalDeviceDeviceGeneratedCommandsFeaturesNVBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceDeviceGeneratedCommandsFeaturesNVBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceDeviceGeneratedCommandsFeaturesNV {}
+pub unsafe trait ExtendsPhysicalDeviceDeviceGeneratedCommandsFeaturesNV {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceDeviceGeneratedCommandsFeaturesNVBuilder<'a> {
     type Target = PhysicalDeviceDeviceGeneratedCommandsFeaturesNV;
     fn deref(&self) -> &Self::Target {
@@ -12478,6 +12492,7 @@ pub struct DevicePrivateDataCreateInfoEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for DevicePrivateDataCreateInfoEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for DevicePrivateDataCreateInfoEXT {}
+pub unsafe trait ExtendsDevicePrivateDataCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for DevicePrivateDataCreateInfoEXTBuilder<'a> {
     type Target = DevicePrivateDataCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -12601,6 +12616,7 @@ pub struct PhysicalDevicePrivateDataFeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDevicePrivateDataFeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDevicePrivateDataFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDevicePrivateDataFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDevicePrivateDataFeaturesEXTBuilder<'a> {
     type Target = PhysicalDevicePrivateDataFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -12675,6 +12691,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceDeviceGeneratedCommandsPropertiesNV {}
+pub unsafe trait ExtendsPhysicalDeviceDeviceGeneratedCommandsPropertiesNV {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceDeviceGeneratedCommandsPropertiesNVBuilder<'a> {
     type Target = PhysicalDeviceDeviceGeneratedCommandsPropertiesNV;
     fn deref(&self) -> &Self::Target {
@@ -12884,6 +12901,7 @@ unsafe impl ExtendsGraphicsPipelineCreateInfo
 {
 }
 unsafe impl ExtendsGraphicsPipelineCreateInfo for GraphicsPipelineShaderGroupsCreateInfoNV {}
+pub unsafe trait ExtendsGraphicsPipelineShaderGroupsCreateInfoNV {}
 impl<'a> ::std::ops::Deref for GraphicsPipelineShaderGroupsCreateInfoNVBuilder<'a> {
     type Target = GraphicsPipelineShaderGroupsCreateInfoNV;
     fn deref(&self) -> &Self::Target {
@@ -13651,6 +13669,7 @@ pub struct PhysicalDeviceFeatures2Builder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceFeatures2Builder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceFeatures2 {}
+pub unsafe trait ExtendsPhysicalDeviceFeatures2 {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceFeatures2Builder<'a> {
     type Target = PhysicalDeviceFeatures2;
     fn deref(&self) -> &Self::Target {
@@ -14310,6 +14329,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDevicePushDescriptorPropertiesKHR {}
+pub unsafe trait ExtendsPhysicalDevicePushDescriptorPropertiesKHR {}
 impl<'a> ::std::ops::Deref for PhysicalDevicePushDescriptorPropertiesKHRBuilder<'a> {
     type Target = PhysicalDevicePushDescriptorPropertiesKHR;
     fn deref(&self) -> &Self::Target {
@@ -14444,6 +14464,7 @@ pub struct PhysicalDeviceDriverPropertiesBuilder<'a> {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceDriverPropertiesBuilder<'_> {}
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceDriverProperties {}
+pub unsafe trait ExtendsPhysicalDeviceDriverProperties {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceDriverPropertiesBuilder<'a> {
     type Target = PhysicalDeviceDriverProperties;
     fn deref(&self) -> &Self::Target {
@@ -14513,6 +14534,7 @@ pub struct PresentRegionsKHRBuilder<'a> {
 }
 unsafe impl ExtendsPresentInfoKHR for PresentRegionsKHRBuilder<'_> {}
 unsafe impl ExtendsPresentInfoKHR for PresentRegionsKHR {}
+pub unsafe trait ExtendsPresentRegionsKHR {}
 impl<'a> ::std::ops::Deref for PresentRegionsKHRBuilder<'a> {
     type Target = PresentRegionsKHR;
     fn deref(&self) -> &Self::Target {
@@ -14675,6 +14697,7 @@ pub struct PhysicalDeviceVariablePointersFeaturesBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceVariablePointersFeaturesBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceVariablePointersFeatures {}
+pub unsafe trait ExtendsPhysicalDeviceVariablePointersFeatures {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceVariablePointersFeaturesBuilder<'a> {
     type Target = PhysicalDeviceVariablePointersFeatures;
     fn deref(&self) -> &Self::Target {
@@ -14801,6 +14824,7 @@ unsafe impl ExtendsPhysicalDeviceImageFormatInfo2
 {
 }
 unsafe impl ExtendsPhysicalDeviceImageFormatInfo2 for PhysicalDeviceExternalImageFormatInfo {}
+pub unsafe trait ExtendsPhysicalDeviceExternalImageFormatInfo {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceExternalImageFormatInfoBuilder<'a> {
     type Target = PhysicalDeviceExternalImageFormatInfo;
     fn deref(&self) -> &Self::Target {
@@ -14856,6 +14880,7 @@ pub struct ExternalImageFormatPropertiesBuilder<'a> {
 }
 unsafe impl ExtendsImageFormatProperties2 for ExternalImageFormatPropertiesBuilder<'_> {}
 unsafe impl ExtendsImageFormatProperties2 for ExternalImageFormatProperties {}
+pub unsafe trait ExtendsExternalImageFormatProperties {}
 impl<'a> ::std::ops::Deref for ExternalImageFormatPropertiesBuilder<'a> {
     type Target = ExternalImageFormatProperties;
     fn deref(&self) -> &Self::Target {
@@ -15076,6 +15101,7 @@ pub struct PhysicalDeviceIDPropertiesBuilder<'a> {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceIDPropertiesBuilder<'_> {}
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceIDProperties {}
+pub unsafe trait ExtendsPhysicalDeviceIDProperties {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceIDPropertiesBuilder<'a> {
     type Target = PhysicalDeviceIDProperties;
     fn deref(&self) -> &Self::Target {
@@ -15147,6 +15173,7 @@ pub struct ExternalMemoryImageCreateInfoBuilder<'a> {
 }
 unsafe impl ExtendsImageCreateInfo for ExternalMemoryImageCreateInfoBuilder<'_> {}
 unsafe impl ExtendsImageCreateInfo for ExternalMemoryImageCreateInfo {}
+pub unsafe trait ExtendsExternalMemoryImageCreateInfo {}
 impl<'a> ::std::ops::Deref for ExternalMemoryImageCreateInfoBuilder<'a> {
     type Target = ExternalMemoryImageCreateInfo;
     fn deref(&self) -> &Self::Target {
@@ -15202,6 +15229,7 @@ pub struct ExternalMemoryBufferCreateInfoBuilder<'a> {
 }
 unsafe impl ExtendsBufferCreateInfo for ExternalMemoryBufferCreateInfoBuilder<'_> {}
 unsafe impl ExtendsBufferCreateInfo for ExternalMemoryBufferCreateInfo {}
+pub unsafe trait ExtendsExternalMemoryBufferCreateInfo {}
 impl<'a> ::std::ops::Deref for ExternalMemoryBufferCreateInfoBuilder<'a> {
     type Target = ExternalMemoryBufferCreateInfo;
     fn deref(&self) -> &Self::Target {
@@ -15257,6 +15285,7 @@ pub struct ExportMemoryAllocateInfoBuilder<'a> {
 }
 unsafe impl ExtendsMemoryAllocateInfo for ExportMemoryAllocateInfoBuilder<'_> {}
 unsafe impl ExtendsMemoryAllocateInfo for ExportMemoryAllocateInfo {}
+pub unsafe trait ExtendsExportMemoryAllocateInfo {}
 impl<'a> ::std::ops::Deref for ExportMemoryAllocateInfoBuilder<'a> {
     type Target = ExportMemoryAllocateInfo;
     fn deref(&self) -> &Self::Target {
@@ -15316,6 +15345,7 @@ pub struct ImportMemoryWin32HandleInfoKHRBuilder<'a> {
 }
 unsafe impl ExtendsMemoryAllocateInfo for ImportMemoryWin32HandleInfoKHRBuilder<'_> {}
 unsafe impl ExtendsMemoryAllocateInfo for ImportMemoryWin32HandleInfoKHR {}
+pub unsafe trait ExtendsImportMemoryWin32HandleInfoKHR {}
 impl<'a> ::std::ops::Deref for ImportMemoryWin32HandleInfoKHRBuilder<'a> {
     type Target = ImportMemoryWin32HandleInfoKHR;
     fn deref(&self) -> &Self::Target {
@@ -15383,6 +15413,7 @@ pub struct ExportMemoryWin32HandleInfoKHRBuilder<'a> {
 }
 unsafe impl ExtendsMemoryAllocateInfo for ExportMemoryWin32HandleInfoKHRBuilder<'_> {}
 unsafe impl ExtendsMemoryAllocateInfo for ExportMemoryWin32HandleInfoKHR {}
+pub unsafe trait ExtendsExportMemoryWin32HandleInfoKHR {}
 impl<'a> ::std::ops::Deref for ExportMemoryWin32HandleInfoKHRBuilder<'a> {
     type Target = ExportMemoryWin32HandleInfoKHR;
     fn deref(&self) -> &Self::Target {
@@ -15448,6 +15479,7 @@ pub struct ImportMemoryZirconHandleInfoFUCHSIABuilder<'a> {
 }
 unsafe impl ExtendsMemoryAllocateInfo for ImportMemoryZirconHandleInfoFUCHSIABuilder<'_> {}
 unsafe impl ExtendsMemoryAllocateInfo for ImportMemoryZirconHandleInfoFUCHSIA {}
+pub unsafe trait ExtendsImportMemoryZirconHandleInfoFUCHSIA {}
 impl<'a> ::std::ops::Deref for ImportMemoryZirconHandleInfoFUCHSIABuilder<'a> {
     type Target = ImportMemoryZirconHandleInfoFUCHSIA;
     fn deref(&self) -> &Self::Target {
@@ -15799,6 +15831,7 @@ pub struct ImportMemoryFdInfoKHRBuilder<'a> {
 }
 unsafe impl ExtendsMemoryAllocateInfo for ImportMemoryFdInfoKHRBuilder<'_> {}
 unsafe impl ExtendsMemoryAllocateInfo for ImportMemoryFdInfoKHR {}
+pub unsafe trait ExtendsImportMemoryFdInfoKHR {}
 impl<'a> ::std::ops::Deref for ImportMemoryFdInfoKHRBuilder<'a> {
     type Target = ImportMemoryFdInfoKHR;
     fn deref(&self) -> &Self::Target {
@@ -16014,6 +16047,7 @@ unsafe impl ExtendsSubmitInfo for Win32KeyedMutexAcquireReleaseInfoKHRBuilder<'_
 unsafe impl ExtendsSubmitInfo for Win32KeyedMutexAcquireReleaseInfoKHR {}
 unsafe impl ExtendsSubmitInfo2KHR for Win32KeyedMutexAcquireReleaseInfoKHRBuilder<'_> {}
 unsafe impl ExtendsSubmitInfo2KHR for Win32KeyedMutexAcquireReleaseInfoKHR {}
+pub unsafe trait ExtendsWin32KeyedMutexAcquireReleaseInfoKHR {}
 impl<'a> ::std::ops::Deref for Win32KeyedMutexAcquireReleaseInfoKHRBuilder<'a> {
     type Target = Win32KeyedMutexAcquireReleaseInfoKHR;
     fn deref(&self) -> &Self::Target {
@@ -16250,6 +16284,7 @@ pub struct ExportSemaphoreCreateInfoBuilder<'a> {
 }
 unsafe impl ExtendsSemaphoreCreateInfo for ExportSemaphoreCreateInfoBuilder<'_> {}
 unsafe impl ExtendsSemaphoreCreateInfo for ExportSemaphoreCreateInfo {}
+pub unsafe trait ExtendsExportSemaphoreCreateInfo {}
 impl<'a> ::std::ops::Deref for ExportSemaphoreCreateInfoBuilder<'a> {
     type Target = ExportSemaphoreCreateInfo;
     fn deref(&self) -> &Self::Target {
@@ -16404,6 +16439,7 @@ pub struct ExportSemaphoreWin32HandleInfoKHRBuilder<'a> {
 }
 unsafe impl ExtendsSemaphoreCreateInfo for ExportSemaphoreWin32HandleInfoKHRBuilder<'_> {}
 unsafe impl ExtendsSemaphoreCreateInfo for ExportSemaphoreWin32HandleInfoKHR {}
+pub unsafe trait ExtendsExportSemaphoreWin32HandleInfoKHR {}
 impl<'a> ::std::ops::Deref for ExportSemaphoreWin32HandleInfoKHRBuilder<'a> {
     type Target = ExportSemaphoreWin32HandleInfoKHR;
     fn deref(&self) -> &Self::Target {
@@ -16473,6 +16509,7 @@ pub struct D3D12FenceSubmitInfoKHRBuilder<'a> {
 }
 unsafe impl ExtendsSubmitInfo for D3D12FenceSubmitInfoKHRBuilder<'_> {}
 unsafe impl ExtendsSubmitInfo for D3D12FenceSubmitInfoKHR {}
+pub unsafe trait ExtendsD3D12FenceSubmitInfoKHR {}
 impl<'a> ::std::ops::Deref for D3D12FenceSubmitInfoKHRBuilder<'a> {
     type Target = D3D12FenceSubmitInfoKHR;
     fn deref(&self) -> &Self::Target {
@@ -17091,6 +17128,7 @@ pub struct ExportFenceCreateInfoBuilder<'a> {
 }
 unsafe impl ExtendsFenceCreateInfo for ExportFenceCreateInfoBuilder<'_> {}
 unsafe impl ExtendsFenceCreateInfo for ExportFenceCreateInfo {}
+pub unsafe trait ExtendsExportFenceCreateInfo {}
 impl<'a> ::std::ops::Deref for ExportFenceCreateInfoBuilder<'a> {
     type Target = ExportFenceCreateInfo;
     fn deref(&self) -> &Self::Target {
@@ -17242,6 +17280,7 @@ pub struct ExportFenceWin32HandleInfoKHRBuilder<'a> {
 }
 unsafe impl ExtendsFenceCreateInfo for ExportFenceWin32HandleInfoKHRBuilder<'_> {}
 unsafe impl ExtendsFenceCreateInfo for ExportFenceWin32HandleInfoKHR {}
+pub unsafe trait ExtendsExportFenceWin32HandleInfoKHR {}
 impl<'a> ::std::ops::Deref for ExportFenceWin32HandleInfoKHRBuilder<'a> {
     type Target = ExportFenceWin32HandleInfoKHR;
     fn deref(&self) -> &Self::Target {
@@ -17543,6 +17582,7 @@ pub struct PhysicalDeviceMultiviewFeaturesBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceMultiviewFeaturesBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceMultiviewFeatures {}
+pub unsafe trait ExtendsPhysicalDeviceMultiviewFeatures {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceMultiviewFeaturesBuilder<'a> {
     type Target = PhysicalDeviceMultiviewFeatures;
     fn deref(&self) -> &Self::Target {
@@ -17608,6 +17648,7 @@ pub struct PhysicalDeviceMultiviewPropertiesBuilder<'a> {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceMultiviewPropertiesBuilder<'_> {}
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceMultiviewProperties {}
+pub unsafe trait ExtendsPhysicalDeviceMultiviewProperties {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceMultiviewPropertiesBuilder<'a> {
     type Target = PhysicalDeviceMultiviewProperties;
     fn deref(&self) -> &Self::Target {
@@ -17677,6 +17718,7 @@ pub struct RenderPassMultiviewCreateInfoBuilder<'a> {
 }
 unsafe impl ExtendsRenderPassCreateInfo for RenderPassMultiviewCreateInfoBuilder<'_> {}
 unsafe impl ExtendsRenderPassCreateInfo for RenderPassMultiviewCreateInfo {}
+pub unsafe trait ExtendsRenderPassMultiviewCreateInfo {}
 impl<'a> ::std::ops::Deref for RenderPassMultiviewCreateInfoBuilder<'a> {
     type Target = RenderPassMultiviewCreateInfo;
     fn deref(&self) -> &Self::Target {
@@ -18081,6 +18123,7 @@ pub struct SwapchainCounterCreateInfoEXTBuilder<'a> {
 }
 unsafe impl ExtendsSwapchainCreateInfoKHR for SwapchainCounterCreateInfoEXTBuilder<'_> {}
 unsafe impl ExtendsSwapchainCreateInfoKHR for SwapchainCounterCreateInfoEXT {}
+pub unsafe trait ExtendsSwapchainCounterCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for SwapchainCounterCreateInfoEXTBuilder<'a> {
     type Target = SwapchainCounterCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -18221,6 +18264,7 @@ pub struct MemoryAllocateFlagsInfoBuilder<'a> {
 }
 unsafe impl ExtendsMemoryAllocateInfo for MemoryAllocateFlagsInfoBuilder<'_> {}
 unsafe impl ExtendsMemoryAllocateInfo for MemoryAllocateFlagsInfo {}
+pub unsafe trait ExtendsMemoryAllocateFlagsInfo {}
 impl<'a> ::std::ops::Deref for MemoryAllocateFlagsInfoBuilder<'a> {
     type Target = MemoryAllocateFlagsInfo;
     fn deref(&self) -> &Self::Target {
@@ -18362,6 +18406,7 @@ pub struct BindBufferMemoryDeviceGroupInfoBuilder<'a> {
 }
 unsafe impl ExtendsBindBufferMemoryInfo for BindBufferMemoryDeviceGroupInfoBuilder<'_> {}
 unsafe impl ExtendsBindBufferMemoryInfo for BindBufferMemoryDeviceGroupInfo {}
+pub unsafe trait ExtendsBindBufferMemoryDeviceGroupInfo {}
 impl<'a> ::std::ops::Deref for BindBufferMemoryDeviceGroupInfoBuilder<'a> {
     type Target = BindBufferMemoryDeviceGroupInfo;
     fn deref(&self) -> &Self::Target {
@@ -18504,6 +18549,7 @@ pub struct BindImageMemoryDeviceGroupInfoBuilder<'a> {
 }
 unsafe impl ExtendsBindImageMemoryInfo for BindImageMemoryDeviceGroupInfoBuilder<'_> {}
 unsafe impl ExtendsBindImageMemoryInfo for BindImageMemoryDeviceGroupInfo {}
+pub unsafe trait ExtendsBindImageMemoryDeviceGroupInfo {}
 impl<'a> ::std::ops::Deref for BindImageMemoryDeviceGroupInfoBuilder<'a> {
     type Target = BindImageMemoryDeviceGroupInfo;
     fn deref(&self) -> &Self::Target {
@@ -18572,6 +18618,7 @@ pub struct DeviceGroupRenderPassBeginInfoBuilder<'a> {
 }
 unsafe impl ExtendsRenderPassBeginInfo for DeviceGroupRenderPassBeginInfoBuilder<'_> {}
 unsafe impl ExtendsRenderPassBeginInfo for DeviceGroupRenderPassBeginInfo {}
+pub unsafe trait ExtendsDeviceGroupRenderPassBeginInfo {}
 impl<'a> ::std::ops::Deref for DeviceGroupRenderPassBeginInfoBuilder<'a> {
     type Target = DeviceGroupRenderPassBeginInfo;
     fn deref(&self) -> &Self::Target {
@@ -18632,6 +18679,7 @@ pub struct DeviceGroupCommandBufferBeginInfoBuilder<'a> {
 }
 unsafe impl ExtendsCommandBufferBeginInfo for DeviceGroupCommandBufferBeginInfoBuilder<'_> {}
 unsafe impl ExtendsCommandBufferBeginInfo for DeviceGroupCommandBufferBeginInfo {}
+pub unsafe trait ExtendsDeviceGroupCommandBufferBeginInfo {}
 impl<'a> ::std::ops::Deref for DeviceGroupCommandBufferBeginInfoBuilder<'a> {
     type Target = DeviceGroupCommandBufferBeginInfo;
     fn deref(&self) -> &Self::Target {
@@ -18697,6 +18745,7 @@ pub struct DeviceGroupSubmitInfoBuilder<'a> {
 }
 unsafe impl ExtendsSubmitInfo for DeviceGroupSubmitInfoBuilder<'_> {}
 unsafe impl ExtendsSubmitInfo for DeviceGroupSubmitInfo {}
+pub unsafe trait ExtendsDeviceGroupSubmitInfo {}
 impl<'a> ::std::ops::Deref for DeviceGroupSubmitInfoBuilder<'a> {
     type Target = DeviceGroupSubmitInfo;
     fn deref(&self) -> &Self::Target {
@@ -18771,6 +18820,7 @@ pub struct DeviceGroupBindSparseInfoBuilder<'a> {
 }
 unsafe impl ExtendsBindSparseInfo for DeviceGroupBindSparseInfoBuilder<'_> {}
 unsafe impl ExtendsBindSparseInfo for DeviceGroupBindSparseInfo {}
+pub unsafe trait ExtendsDeviceGroupBindSparseInfo {}
 impl<'a> ::std::ops::Deref for DeviceGroupBindSparseInfoBuilder<'a> {
     type Target = DeviceGroupBindSparseInfo;
     fn deref(&self) -> &Self::Target {
@@ -18907,6 +18957,7 @@ pub struct ImageSwapchainCreateInfoKHRBuilder<'a> {
 }
 unsafe impl ExtendsImageCreateInfo for ImageSwapchainCreateInfoKHRBuilder<'_> {}
 unsafe impl ExtendsImageCreateInfo for ImageSwapchainCreateInfoKHR {}
+pub unsafe trait ExtendsImageSwapchainCreateInfoKHR {}
 impl<'a> ::std::ops::Deref for ImageSwapchainCreateInfoKHRBuilder<'a> {
     type Target = ImageSwapchainCreateInfoKHR;
     fn deref(&self) -> &Self::Target {
@@ -18964,6 +19015,7 @@ pub struct BindImageMemorySwapchainInfoKHRBuilder<'a> {
 }
 unsafe impl ExtendsBindImageMemoryInfo for BindImageMemorySwapchainInfoKHRBuilder<'_> {}
 unsafe impl ExtendsBindImageMemoryInfo for BindImageMemorySwapchainInfoKHR {}
+pub unsafe trait ExtendsBindImageMemorySwapchainInfoKHR {}
 impl<'a> ::std::ops::Deref for BindImageMemorySwapchainInfoKHRBuilder<'a> {
     type Target = BindImageMemorySwapchainInfoKHR;
     fn deref(&self) -> &Self::Target {
@@ -19119,6 +19171,7 @@ pub struct DeviceGroupPresentInfoKHRBuilder<'a> {
 }
 unsafe impl ExtendsPresentInfoKHR for DeviceGroupPresentInfoKHRBuilder<'_> {}
 unsafe impl ExtendsPresentInfoKHR for DeviceGroupPresentInfoKHR {}
+pub unsafe trait ExtendsDeviceGroupPresentInfoKHR {}
 impl<'a> ::std::ops::Deref for DeviceGroupPresentInfoKHRBuilder<'a> {
     type Target = DeviceGroupPresentInfoKHR;
     fn deref(&self) -> &Self::Target {
@@ -19181,6 +19234,7 @@ pub struct DeviceGroupDeviceCreateInfoBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for DeviceGroupDeviceCreateInfoBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for DeviceGroupDeviceCreateInfo {}
+pub unsafe trait ExtendsDeviceGroupDeviceCreateInfo {}
 impl<'a> ::std::ops::Deref for DeviceGroupDeviceCreateInfoBuilder<'a> {
     type Target = DeviceGroupDeviceCreateInfo;
     fn deref(&self) -> &Self::Target {
@@ -19237,6 +19291,7 @@ pub struct DeviceGroupSwapchainCreateInfoKHRBuilder<'a> {
 }
 unsafe impl ExtendsSwapchainCreateInfoKHR for DeviceGroupSwapchainCreateInfoKHRBuilder<'_> {}
 unsafe impl ExtendsSwapchainCreateInfoKHR for DeviceGroupSwapchainCreateInfoKHR {}
+pub unsafe trait ExtendsDeviceGroupSwapchainCreateInfoKHR {}
 impl<'a> ::std::ops::Deref for DeviceGroupSwapchainCreateInfoKHRBuilder<'a> {
     type Target = DeviceGroupSwapchainCreateInfoKHR;
     fn deref(&self) -> &Self::Target {
@@ -19629,6 +19684,7 @@ pub struct DisplayNativeHdrSurfaceCapabilitiesAMDBuilder<'a> {
 }
 unsafe impl ExtendsSurfaceCapabilities2KHR for DisplayNativeHdrSurfaceCapabilitiesAMDBuilder<'_> {}
 unsafe impl ExtendsSurfaceCapabilities2KHR for DisplayNativeHdrSurfaceCapabilitiesAMD {}
+pub unsafe trait ExtendsDisplayNativeHdrSurfaceCapabilitiesAMD {}
 impl<'a> ::std::ops::Deref for DisplayNativeHdrSurfaceCapabilitiesAMDBuilder<'a> {
     type Target = DisplayNativeHdrSurfaceCapabilitiesAMD;
     fn deref(&self) -> &Self::Target {
@@ -19684,6 +19740,7 @@ pub struct SwapchainDisplayNativeHdrCreateInfoAMDBuilder<'a> {
 }
 unsafe impl ExtendsSwapchainCreateInfoKHR for SwapchainDisplayNativeHdrCreateInfoAMDBuilder<'_> {}
 unsafe impl ExtendsSwapchainCreateInfoKHR for SwapchainDisplayNativeHdrCreateInfoAMD {}
+pub unsafe trait ExtendsSwapchainDisplayNativeHdrCreateInfoAMD {}
 impl<'a> ::std::ops::Deref for SwapchainDisplayNativeHdrCreateInfoAMDBuilder<'a> {
     type Target = SwapchainDisplayNativeHdrCreateInfoAMD;
     fn deref(&self) -> &Self::Target {
@@ -19845,6 +19902,7 @@ pub struct PresentTimesInfoGOOGLEBuilder<'a> {
 }
 unsafe impl ExtendsPresentInfoKHR for PresentTimesInfoGOOGLEBuilder<'_> {}
 unsafe impl ExtendsPresentInfoKHR for PresentTimesInfoGOOGLE {}
+pub unsafe trait ExtendsPresentTimesInfoGOOGLE {}
 impl<'a> ::std::ops::Deref for PresentTimesInfoGOOGLEBuilder<'a> {
     type Target = PresentTimesInfoGOOGLE;
     fn deref(&self) -> &Self::Target {
@@ -20224,6 +20282,7 @@ unsafe impl ExtendsPipelineViewportStateCreateInfo
 {
 }
 unsafe impl ExtendsPipelineViewportStateCreateInfo for PipelineViewportWScalingStateCreateInfoNV {}
+pub unsafe trait ExtendsPipelineViewportWScalingStateCreateInfoNV {}
 impl<'a> ::std::ops::Deref for PipelineViewportWScalingStateCreateInfoNVBuilder<'a> {
     type Target = PipelineViewportWScalingStateCreateInfoNV;
     fn deref(&self) -> &Self::Target {
@@ -20348,6 +20407,7 @@ unsafe impl ExtendsPipelineViewportStateCreateInfo
 {
 }
 unsafe impl ExtendsPipelineViewportStateCreateInfo for PipelineViewportSwizzleStateCreateInfoNV {}
+pub unsafe trait ExtendsPipelineViewportSwizzleStateCreateInfoNV {}
 impl<'a> ::std::ops::Deref for PipelineViewportSwizzleStateCreateInfoNVBuilder<'a> {
     type Target = PipelineViewportSwizzleStateCreateInfoNV;
     fn deref(&self) -> &Self::Target {
@@ -20411,6 +20471,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceDiscardRectanglePropertiesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceDiscardRectanglePropertiesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceDiscardRectanglePropertiesEXTBuilder<'a> {
     type Target = PhysicalDeviceDiscardRectanglePropertiesEXT;
     fn deref(&self) -> &Self::Target {
@@ -20475,6 +20536,7 @@ unsafe impl ExtendsGraphicsPipelineCreateInfo
 {
 }
 unsafe impl ExtendsGraphicsPipelineCreateInfo for PipelineDiscardRectangleStateCreateInfoEXT {}
+pub unsafe trait ExtendsPipelineDiscardRectangleStateCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for PipelineDiscardRectangleStateCreateInfoEXTBuilder<'a> {
     type Target = PipelineDiscardRectangleStateCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -20548,6 +20610,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
     for PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX
 {
 }
+pub unsafe trait ExtendsPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceMultiviewPerViewAttributesPropertiesNVXBuilder<'a> {
     type Target = PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX;
     fn deref(&self) -> &Self::Target {
@@ -20660,6 +20723,7 @@ pub struct RenderPassInputAttachmentAspectCreateInfoBuilder<'a> {
 }
 unsafe impl ExtendsRenderPassCreateInfo for RenderPassInputAttachmentAspectCreateInfoBuilder<'_> {}
 unsafe impl ExtendsRenderPassCreateInfo for RenderPassInputAttachmentAspectCreateInfo {}
+pub unsafe trait ExtendsRenderPassInputAttachmentAspectCreateInfo {}
 impl<'a> ::std::ops::Deref for RenderPassInputAttachmentAspectCreateInfoBuilder<'a> {
     type Target = RenderPassInputAttachmentAspectCreateInfo;
     fn deref(&self) -> &Self::Target {
@@ -21275,6 +21339,7 @@ pub struct SharedPresentSurfaceCapabilitiesKHRBuilder<'a> {
 }
 unsafe impl ExtendsSurfaceCapabilities2KHR for SharedPresentSurfaceCapabilitiesKHRBuilder<'_> {}
 unsafe impl ExtendsSurfaceCapabilities2KHR for SharedPresentSurfaceCapabilitiesKHR {}
+pub unsafe trait ExtendsSharedPresentSurfaceCapabilitiesKHR {}
 impl<'a> ::std::ops::Deref for SharedPresentSurfaceCapabilitiesKHRBuilder<'a> {
     type Target = SharedPresentSurfaceCapabilitiesKHR;
     fn deref(&self) -> &Self::Target {
@@ -21339,6 +21404,7 @@ pub struct PhysicalDevice16BitStorageFeaturesBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDevice16BitStorageFeaturesBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDevice16BitStorageFeatures {}
+pub unsafe trait ExtendsPhysicalDevice16BitStorageFeatures {}
 impl<'a> ::std::ops::Deref for PhysicalDevice16BitStorageFeaturesBuilder<'a> {
     type Target = PhysicalDevice16BitStorageFeatures;
     fn deref(&self) -> &Self::Target {
@@ -21416,6 +21482,7 @@ pub struct PhysicalDeviceSubgroupPropertiesBuilder<'a> {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceSubgroupPropertiesBuilder<'_> {}
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceSubgroupProperties {}
+pub unsafe trait ExtendsPhysicalDeviceSubgroupProperties {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceSubgroupPropertiesBuilder<'a> {
     type Target = PhysicalDeviceSubgroupProperties;
     fn deref(&self) -> &Self::Target {
@@ -21486,6 +21553,7 @@ unsafe impl ExtendsDeviceCreateInfo
 {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceShaderSubgroupExtendedTypesFeatures {}
+pub unsafe trait ExtendsPhysicalDeviceShaderSubgroupExtendedTypesFeatures {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceShaderSubgroupExtendedTypesFeaturesBuilder<'a> {
     type Target = PhysicalDeviceShaderSubgroupExtendedTypesFeatures;
     fn deref(&self) -> &Self::Target {
@@ -21887,6 +21955,7 @@ pub struct PhysicalDevicePointClippingPropertiesBuilder<'a> {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDevicePointClippingPropertiesBuilder<'_> {}
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDevicePointClippingProperties {}
+pub unsafe trait ExtendsPhysicalDevicePointClippingProperties {}
 impl<'a> ::std::ops::Deref for PhysicalDevicePointClippingPropertiesBuilder<'a> {
     type Target = PhysicalDevicePointClippingProperties;
     fn deref(&self) -> &Self::Target {
@@ -21947,6 +22016,7 @@ pub struct MemoryDedicatedRequirementsBuilder<'a> {
 }
 unsafe impl ExtendsMemoryRequirements2 for MemoryDedicatedRequirementsBuilder<'_> {}
 unsafe impl ExtendsMemoryRequirements2 for MemoryDedicatedRequirements {}
+pub unsafe trait ExtendsMemoryDedicatedRequirements {}
 impl<'a> ::std::ops::Deref for MemoryDedicatedRequirementsBuilder<'a> {
     type Target = MemoryDedicatedRequirements;
     fn deref(&self) -> &Self::Target {
@@ -22008,6 +22078,7 @@ pub struct MemoryDedicatedAllocateInfoBuilder<'a> {
 }
 unsafe impl ExtendsMemoryAllocateInfo for MemoryDedicatedAllocateInfoBuilder<'_> {}
 unsafe impl ExtendsMemoryAllocateInfo for MemoryDedicatedAllocateInfo {}
+pub unsafe trait ExtendsMemoryDedicatedAllocateInfo {}
 impl<'a> ::std::ops::Deref for MemoryDedicatedAllocateInfoBuilder<'a> {
     type Target = MemoryDedicatedAllocateInfo;
     fn deref(&self) -> &Self::Target {
@@ -22067,6 +22138,7 @@ pub struct ImageViewUsageCreateInfoBuilder<'a> {
 }
 unsafe impl ExtendsImageViewCreateInfo for ImageViewUsageCreateInfoBuilder<'_> {}
 unsafe impl ExtendsImageViewCreateInfo for ImageViewUsageCreateInfo {}
+pub unsafe trait ExtendsImageViewUsageCreateInfo {}
 impl<'a> ::std::ops::Deref for ImageViewUsageCreateInfoBuilder<'a> {
     type Target = ImageViewUsageCreateInfo;
     fn deref(&self) -> &Self::Target {
@@ -22128,6 +22200,7 @@ unsafe impl ExtendsPipelineTessellationStateCreateInfo
     for PipelineTessellationDomainOriginStateCreateInfo
 {
 }
+pub unsafe trait ExtendsPipelineTessellationDomainOriginStateCreateInfo {}
 impl<'a> ::std::ops::Deref for PipelineTessellationDomainOriginStateCreateInfoBuilder<'a> {
     type Target = PipelineTessellationDomainOriginStateCreateInfo;
     fn deref(&self) -> &Self::Target {
@@ -22185,6 +22258,7 @@ unsafe impl ExtendsSamplerCreateInfo for SamplerYcbcrConversionInfoBuilder<'_> {
 unsafe impl ExtendsSamplerCreateInfo for SamplerYcbcrConversionInfo {}
 unsafe impl ExtendsImageViewCreateInfo for SamplerYcbcrConversionInfoBuilder<'_> {}
 unsafe impl ExtendsImageViewCreateInfo for SamplerYcbcrConversionInfo {}
+pub unsafe trait ExtendsSamplerYcbcrConversionInfo {}
 impl<'a> ::std::ops::Deref for SamplerYcbcrConversionInfoBuilder<'a> {
     type Target = SamplerYcbcrConversionInfo;
     fn deref(&self) -> &Self::Target {
@@ -22353,6 +22427,7 @@ pub struct BindImagePlaneMemoryInfoBuilder<'a> {
 }
 unsafe impl ExtendsBindImageMemoryInfo for BindImagePlaneMemoryInfoBuilder<'_> {}
 unsafe impl ExtendsBindImageMemoryInfo for BindImagePlaneMemoryInfo {}
+pub unsafe trait ExtendsBindImagePlaneMemoryInfo {}
 impl<'a> ::std::ops::Deref for BindImagePlaneMemoryInfoBuilder<'a> {
     type Target = BindImagePlaneMemoryInfo;
     fn deref(&self) -> &Self::Target {
@@ -22408,6 +22483,7 @@ pub struct ImagePlaneMemoryRequirementsInfoBuilder<'a> {
 }
 unsafe impl ExtendsImageMemoryRequirementsInfo2 for ImagePlaneMemoryRequirementsInfoBuilder<'_> {}
 unsafe impl ExtendsImageMemoryRequirementsInfo2 for ImagePlaneMemoryRequirementsInfo {}
+pub unsafe trait ExtendsImagePlaneMemoryRequirementsInfo {}
 impl<'a> ::std::ops::Deref for ImagePlaneMemoryRequirementsInfoBuilder<'a> {
     type Target = ImagePlaneMemoryRequirementsInfo;
     fn deref(&self) -> &Self::Target {
@@ -22463,6 +22539,7 @@ pub struct PhysicalDeviceSamplerYcbcrConversionFeaturesBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceSamplerYcbcrConversionFeaturesBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceSamplerYcbcrConversionFeatures {}
+pub unsafe trait ExtendsPhysicalDeviceSamplerYcbcrConversionFeatures {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceSamplerYcbcrConversionFeaturesBuilder<'a> {
     type Target = PhysicalDeviceSamplerYcbcrConversionFeatures;
     fn deref(&self) -> &Self::Target {
@@ -22521,6 +22598,7 @@ unsafe impl ExtendsImageFormatProperties2
 {
 }
 unsafe impl ExtendsImageFormatProperties2 for SamplerYcbcrConversionImageFormatProperties {}
+pub unsafe trait ExtendsSamplerYcbcrConversionImageFormatProperties {}
 impl<'a> ::std::ops::Deref for SamplerYcbcrConversionImageFormatPropertiesBuilder<'a> {
     type Target = SamplerYcbcrConversionImageFormatProperties;
     fn deref(&self) -> &Self::Target {
@@ -22580,6 +22658,7 @@ pub struct TextureLODGatherFormatPropertiesAMDBuilder<'a> {
 }
 unsafe impl ExtendsImageFormatProperties2 for TextureLODGatherFormatPropertiesAMDBuilder<'_> {}
 unsafe impl ExtendsImageFormatProperties2 for TextureLODGatherFormatPropertiesAMD {}
+pub unsafe trait ExtendsTextureLODGatherFormatPropertiesAMD {}
 impl<'a> ::std::ops::Deref for TextureLODGatherFormatPropertiesAMDBuilder<'a> {
     type Target = TextureLODGatherFormatPropertiesAMD;
     fn deref(&self) -> &Self::Target {
@@ -22722,6 +22801,7 @@ pub struct ProtectedSubmitInfoBuilder<'a> {
 }
 unsafe impl ExtendsSubmitInfo for ProtectedSubmitInfoBuilder<'_> {}
 unsafe impl ExtendsSubmitInfo for ProtectedSubmitInfo {}
+pub unsafe trait ExtendsProtectedSubmitInfo {}
 impl<'a> ::std::ops::Deref for ProtectedSubmitInfoBuilder<'a> {
     type Target = ProtectedSubmitInfo;
     fn deref(&self) -> &Self::Target {
@@ -22777,6 +22857,7 @@ pub struct PhysicalDeviceProtectedMemoryFeaturesBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceProtectedMemoryFeaturesBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceProtectedMemoryFeatures {}
+pub unsafe trait ExtendsPhysicalDeviceProtectedMemoryFeatures {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceProtectedMemoryFeaturesBuilder<'a> {
     type Target = PhysicalDeviceProtectedMemoryFeatures;
     fn deref(&self) -> &Self::Target {
@@ -22835,6 +22916,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceProtectedMemoryProperties {}
+pub unsafe trait ExtendsPhysicalDeviceProtectedMemoryProperties {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceProtectedMemoryPropertiesBuilder<'a> {
     type Target = PhysicalDeviceProtectedMemoryProperties;
     fn deref(&self) -> &Self::Target {
@@ -22977,6 +23059,7 @@ unsafe impl ExtendsPipelineMultisampleStateCreateInfo
 {
 }
 unsafe impl ExtendsPipelineMultisampleStateCreateInfo for PipelineCoverageToColorStateCreateInfoNV {}
+pub unsafe trait ExtendsPipelineCoverageToColorStateCreateInfoNV {}
 impl<'a> ::std::ops::Deref for PipelineCoverageToColorStateCreateInfoNVBuilder<'a> {
     type Target = PipelineCoverageToColorStateCreateInfoNV;
     fn deref(&self) -> &Self::Target {
@@ -23045,6 +23128,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceSamplerFilterMinmaxProperties {}
+pub unsafe trait ExtendsPhysicalDeviceSamplerFilterMinmaxProperties {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceSamplerFilterMinmaxPropertiesBuilder<'a> {
     type Target = PhysicalDeviceSamplerFilterMinmaxProperties;
     fn deref(&self) -> &Self::Target {
@@ -23167,6 +23251,7 @@ unsafe impl ExtendsImageMemoryBarrier for SampleLocationsInfoEXTBuilder<'_> {}
 unsafe impl ExtendsImageMemoryBarrier for SampleLocationsInfoEXT {}
 unsafe impl ExtendsImageMemoryBarrier2KHR for SampleLocationsInfoEXTBuilder<'_> {}
 unsafe impl ExtendsImageMemoryBarrier2KHR for SampleLocationsInfoEXT {}
+pub unsafe trait ExtendsSampleLocationsInfoEXT {}
 impl<'a> ::std::ops::Deref for SampleLocationsInfoEXTBuilder<'a> {
     type Target = SampleLocationsInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -23334,6 +23419,7 @@ pub struct RenderPassSampleLocationsBeginInfoEXTBuilder<'a> {
 }
 unsafe impl ExtendsRenderPassBeginInfo for RenderPassSampleLocationsBeginInfoEXTBuilder<'_> {}
 unsafe impl ExtendsRenderPassBeginInfo for RenderPassSampleLocationsBeginInfoEXT {}
+pub unsafe trait ExtendsRenderPassSampleLocationsBeginInfoEXT {}
 impl<'a> ::std::ops::Deref for RenderPassSampleLocationsBeginInfoEXTBuilder<'a> {
     type Target = RenderPassSampleLocationsBeginInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -23411,6 +23497,7 @@ unsafe impl ExtendsPipelineMultisampleStateCreateInfo
     for PipelineSampleLocationsStateCreateInfoEXT
 {
 }
+pub unsafe trait ExtendsPipelineSampleLocationsStateCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for PipelineSampleLocationsStateCreateInfoEXTBuilder<'a> {
     type Target = PipelineSampleLocationsStateCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -23481,6 +23568,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceSampleLocationsPropertiesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceSampleLocationsPropertiesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceSampleLocationsPropertiesEXTBuilder<'a> {
     type Target = PhysicalDeviceSampleLocationsPropertiesEXT;
     fn deref(&self) -> &Self::Target {
@@ -23632,6 +23720,7 @@ pub struct SamplerReductionModeCreateInfoBuilder<'a> {
 }
 unsafe impl ExtendsSamplerCreateInfo for SamplerReductionModeCreateInfoBuilder<'_> {}
 unsafe impl ExtendsSamplerCreateInfo for SamplerReductionModeCreateInfo {}
+pub unsafe trait ExtendsSamplerReductionModeCreateInfo {}
 impl<'a> ::std::ops::Deref for SamplerReductionModeCreateInfoBuilder<'a> {
     type Target = SamplerReductionModeCreateInfo;
     fn deref(&self) -> &Self::Target {
@@ -23687,6 +23776,7 @@ pub struct PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceBlendOperationAdvancedFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceBlendOperationAdvancedFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceBlendOperationAdvancedFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -23758,6 +23848,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceBlendOperationAdvancedPropertiesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceBlendOperationAdvancedPropertiesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceBlendOperationAdvancedPropertiesEXTBuilder<'a> {
     type Target = PhysicalDeviceBlendOperationAdvancedPropertiesEXT;
     fn deref(&self) -> &Self::Target {
@@ -23860,6 +23951,7 @@ unsafe impl ExtendsPipelineColorBlendStateCreateInfo
     for PipelineColorBlendAdvancedStateCreateInfoEXT
 {
 }
+pub unsafe trait ExtendsPipelineColorBlendAdvancedStateCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for PipelineColorBlendAdvancedStateCreateInfoEXTBuilder<'a> {
     type Target = PipelineColorBlendAdvancedStateCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -23925,6 +24017,7 @@ pub struct PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceInlineUniformBlockFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceInlineUniformBlockFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceInlineUniformBlockFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -24000,6 +24093,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceInlineUniformBlockPropertiesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceInlineUniformBlockPropertiesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceInlineUniformBlockPropertiesEXTBuilder<'a> {
     type Target = PhysicalDeviceInlineUniformBlockPropertiesEXT;
     fn deref(&self) -> &Self::Target {
@@ -24091,6 +24185,7 @@ pub struct WriteDescriptorSetInlineUniformBlockEXTBuilder<'a> {
 }
 unsafe impl ExtendsWriteDescriptorSet for WriteDescriptorSetInlineUniformBlockEXTBuilder<'_> {}
 unsafe impl ExtendsWriteDescriptorSet for WriteDescriptorSetInlineUniformBlockEXT {}
+pub unsafe trait ExtendsWriteDescriptorSetInlineUniformBlockEXT {}
 impl<'a> ::std::ops::Deref for WriteDescriptorSetInlineUniformBlockEXTBuilder<'a> {
     type Target = WriteDescriptorSetInlineUniformBlockEXT;
     fn deref(&self) -> &Self::Target {
@@ -24150,6 +24245,7 @@ unsafe impl ExtendsDescriptorPoolCreateInfo
 {
 }
 unsafe impl ExtendsDescriptorPoolCreateInfo for DescriptorPoolInlineUniformBlockCreateInfoEXT {}
+pub unsafe trait ExtendsDescriptorPoolInlineUniformBlockCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for DescriptorPoolInlineUniformBlockCreateInfoEXTBuilder<'a> {
     type Target = DescriptorPoolInlineUniformBlockCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -24222,6 +24318,7 @@ unsafe impl ExtendsPipelineMultisampleStateCreateInfo
     for PipelineCoverageModulationStateCreateInfoNV
 {
 }
+pub unsafe trait ExtendsPipelineCoverageModulationStateCreateInfoNV {}
 impl<'a> ::std::ops::Deref for PipelineCoverageModulationStateCreateInfoNVBuilder<'a> {
     type Target = PipelineCoverageModulationStateCreateInfoNV;
     fn deref(&self) -> &Self::Target {
@@ -24302,6 +24399,7 @@ unsafe impl ExtendsSwapchainCreateInfoKHR for ImageFormatListCreateInfoBuilder<'
 unsafe impl ExtendsSwapchainCreateInfoKHR for ImageFormatListCreateInfo {}
 unsafe impl ExtendsPhysicalDeviceImageFormatInfo2 for ImageFormatListCreateInfoBuilder<'_> {}
 unsafe impl ExtendsPhysicalDeviceImageFormatInfo2 for ImageFormatListCreateInfo {}
+pub unsafe trait ExtendsImageFormatListCreateInfo {}
 impl<'a> ::std::ops::Deref for ImageFormatListCreateInfoBuilder<'a> {
     type Target = ImageFormatListCreateInfo;
     fn deref(&self) -> &Self::Target {
@@ -24435,6 +24533,7 @@ pub struct ShaderModuleValidationCacheCreateInfoEXTBuilder<'a> {
 }
 unsafe impl ExtendsShaderModuleCreateInfo for ShaderModuleValidationCacheCreateInfoEXTBuilder<'_> {}
 unsafe impl ExtendsShaderModuleCreateInfo for ShaderModuleValidationCacheCreateInfoEXT {}
+pub unsafe trait ExtendsShaderModuleValidationCacheCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for ShaderModuleValidationCacheCreateInfoEXTBuilder<'a> {
     type Target = ShaderModuleValidationCacheCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -24492,6 +24591,7 @@ pub struct PhysicalDeviceMaintenance3PropertiesBuilder<'a> {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceMaintenance3PropertiesBuilder<'_> {}
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceMaintenance3Properties {}
+pub unsafe trait ExtendsPhysicalDeviceMaintenance3Properties {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceMaintenance3PropertiesBuilder<'a> {
     type Target = PhysicalDeviceMaintenance3Properties;
     fn deref(&self) -> &Self::Target {
@@ -24619,6 +24719,7 @@ pub struct PhysicalDeviceShaderDrawParametersFeaturesBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceShaderDrawParametersFeaturesBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceShaderDrawParametersFeatures {}
+pub unsafe trait ExtendsPhysicalDeviceShaderDrawParametersFeatures {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceShaderDrawParametersFeaturesBuilder<'a> {
     type Target = PhysicalDeviceShaderDrawParametersFeatures;
     fn deref(&self) -> &Self::Target {
@@ -24676,6 +24777,7 @@ pub struct PhysicalDeviceShaderFloat16Int8FeaturesBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceShaderFloat16Int8FeaturesBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceShaderFloat16Int8Features {}
+pub unsafe trait ExtendsPhysicalDeviceShaderFloat16Int8Features {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceShaderFloat16Int8FeaturesBuilder<'a> {
     type Target = PhysicalDeviceShaderFloat16Int8Features;
     fn deref(&self) -> &Self::Target {
@@ -24767,6 +24869,7 @@ pub struct PhysicalDeviceFloatControlsPropertiesBuilder<'a> {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceFloatControlsPropertiesBuilder<'_> {}
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceFloatControlsProperties {}
+pub unsafe trait ExtendsPhysicalDeviceFloatControlsProperties {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceFloatControlsPropertiesBuilder<'a> {
     type Target = PhysicalDeviceFloatControlsProperties;
     fn deref(&self) -> &Self::Target {
@@ -24931,6 +25034,7 @@ pub struct PhysicalDeviceHostQueryResetFeaturesBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceHostQueryResetFeaturesBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceHostQueryResetFeatures {}
+pub unsafe trait ExtendsPhysicalDeviceHostQueryResetFeatures {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceHostQueryResetFeaturesBuilder<'a> {
     type Target = PhysicalDeviceHostQueryResetFeatures;
     fn deref(&self) -> &Self::Target {
@@ -25411,6 +25515,7 @@ pub struct DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceQueueCreateInfo for DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceQueueCreateInfo for DeviceQueueGlobalPriorityCreateInfoEXT {}
+pub unsafe trait ExtendsDeviceQueueGlobalPriorityCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'a> {
     type Target = DeviceQueueGlobalPriorityCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -25733,6 +25838,7 @@ pub struct DebugUtilsMessengerCreateInfoEXTBuilder<'a> {
 }
 unsafe impl ExtendsInstanceCreateInfo for DebugUtilsMessengerCreateInfoEXTBuilder<'_> {}
 unsafe impl ExtendsInstanceCreateInfo for DebugUtilsMessengerCreateInfoEXT {}
+pub unsafe trait ExtendsDebugUtilsMessengerCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for DebugUtilsMessengerCreateInfoEXTBuilder<'a> {
     type Target = DebugUtilsMessengerCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -25923,6 +26029,7 @@ pub struct PhysicalDeviceDeviceMemoryReportFeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceDeviceMemoryReportFeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceDeviceMemoryReportFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceDeviceMemoryReportFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceDeviceMemoryReportFeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceDeviceMemoryReportFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -25996,6 +26103,7 @@ pub struct DeviceDeviceMemoryReportCreateInfoEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for DeviceDeviceMemoryReportCreateInfoEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for DeviceDeviceMemoryReportCreateInfoEXT {}
+pub unsafe trait ExtendsDeviceDeviceMemoryReportCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for DeviceDeviceMemoryReportCreateInfoEXTBuilder<'a> {
     type Target = DeviceDeviceMemoryReportCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -26171,6 +26279,7 @@ pub struct ImportMemoryHostPointerInfoEXTBuilder<'a> {
 }
 unsafe impl ExtendsMemoryAllocateInfo for ImportMemoryHostPointerInfoEXTBuilder<'_> {}
 unsafe impl ExtendsMemoryAllocateInfo for ImportMemoryHostPointerInfoEXT {}
+pub unsafe trait ExtendsImportMemoryHostPointerInfoEXT {}
 impl<'a> ::std::ops::Deref for ImportMemoryHostPointerInfoEXTBuilder<'a> {
     type Target = ImportMemoryHostPointerInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -26301,6 +26410,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceExternalMemoryHostPropertiesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceExternalMemoryHostPropertiesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceExternalMemoryHostPropertiesEXTBuilder<'a> {
     type Target = PhysicalDeviceExternalMemoryHostPropertiesEXT;
     fn deref(&self) -> &Self::Target {
@@ -26381,6 +26491,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
     for PhysicalDeviceConservativeRasterizationPropertiesEXT
 {
 }
+pub unsafe trait ExtendsPhysicalDeviceConservativeRasterizationPropertiesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceConservativeRasterizationPropertiesEXTBuilder<'a> {
     type Target = PhysicalDeviceConservativeRasterizationPropertiesEXT;
     fn deref(&self) -> &Self::Target {
@@ -26585,6 +26696,7 @@ pub struct PhysicalDeviceShaderCorePropertiesAMDBuilder<'a> {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceShaderCorePropertiesAMDBuilder<'_> {}
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceShaderCorePropertiesAMD {}
+pub unsafe trait ExtendsPhysicalDeviceShaderCorePropertiesAMD {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceShaderCorePropertiesAMDBuilder<'a> {
     type Target = PhysicalDeviceShaderCorePropertiesAMD;
     fn deref(&self) -> &Self::Target {
@@ -26694,6 +26806,7 @@ pub struct PhysicalDeviceShaderCoreProperties2AMDBuilder<'a> {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceShaderCoreProperties2AMDBuilder<'_> {}
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceShaderCoreProperties2AMD {}
+pub unsafe trait ExtendsPhysicalDeviceShaderCoreProperties2AMD {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceShaderCoreProperties2AMDBuilder<'a> {
     type Target = PhysicalDeviceShaderCoreProperties2AMD;
     fn deref(&self) -> &Self::Target {
@@ -26766,6 +26879,7 @@ unsafe impl ExtendsPipelineRasterizationStateCreateInfo
     for PipelineRasterizationConservativeStateCreateInfoEXT
 {
 }
+pub unsafe trait ExtendsPipelineRasterizationConservativeStateCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for PipelineRasterizationConservativeStateCreateInfoEXTBuilder<'a> {
     type Target = PipelineRasterizationConservativeStateCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -26873,6 +26987,7 @@ pub struct PhysicalDeviceDescriptorIndexingFeaturesBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceDescriptorIndexingFeaturesBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceDescriptorIndexingFeatures {}
+pub unsafe trait ExtendsPhysicalDeviceDescriptorIndexingFeatures {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceDescriptorIndexingFeaturesBuilder<'a> {
     type Target = PhysicalDeviceDescriptorIndexingFeatures;
     fn deref(&self) -> &Self::Target {
@@ -27137,6 +27252,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceDescriptorIndexingProperties {}
+pub unsafe trait ExtendsPhysicalDeviceDescriptorIndexingProperties {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceDescriptorIndexingPropertiesBuilder<'a> {
     type Target = PhysicalDeviceDescriptorIndexingProperties;
     fn deref(&self) -> &Self::Target {
@@ -27391,6 +27507,7 @@ unsafe impl ExtendsDescriptorSetLayoutCreateInfo
 {
 }
 unsafe impl ExtendsDescriptorSetLayoutCreateInfo for DescriptorSetLayoutBindingFlagsCreateInfo {}
+pub unsafe trait ExtendsDescriptorSetLayoutBindingFlagsCreateInfo {}
 impl<'a> ::std::ops::Deref for DescriptorSetLayoutBindingFlagsCreateInfoBuilder<'a> {
     type Target = DescriptorSetLayoutBindingFlagsCreateInfo;
     fn deref(&self) -> &Self::Target {
@@ -27452,6 +27569,7 @@ unsafe impl ExtendsDescriptorSetAllocateInfo
 {
 }
 unsafe impl ExtendsDescriptorSetAllocateInfo for DescriptorSetVariableDescriptorCountAllocateInfo {}
+pub unsafe trait ExtendsDescriptorSetVariableDescriptorCountAllocateInfo {}
 impl<'a> ::std::ops::Deref for DescriptorSetVariableDescriptorCountAllocateInfoBuilder<'a> {
     type Target = DescriptorSetVariableDescriptorCountAllocateInfo;
     fn deref(&self) -> &Self::Target {
@@ -27514,6 +27632,7 @@ unsafe impl ExtendsDescriptorSetLayoutSupport
     for DescriptorSetVariableDescriptorCountLayoutSupport
 {
 }
+pub unsafe trait ExtendsDescriptorSetVariableDescriptorCountLayoutSupport {}
 impl<'a> ::std::ops::Deref for DescriptorSetVariableDescriptorCountLayoutSupportBuilder<'a> {
     type Target = DescriptorSetVariableDescriptorCountLayoutSupport;
     fn deref(&self) -> &Self::Target {
@@ -28232,6 +28351,7 @@ pub struct PhysicalDeviceTimelineSemaphoreFeaturesBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceTimelineSemaphoreFeaturesBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceTimelineSemaphoreFeatures {}
+pub unsafe trait ExtendsPhysicalDeviceTimelineSemaphoreFeatures {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceTimelineSemaphoreFeaturesBuilder<'a> {
     type Target = PhysicalDeviceTimelineSemaphoreFeatures;
     fn deref(&self) -> &Self::Target {
@@ -28290,6 +28410,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceTimelineSemaphoreProperties {}
+pub unsafe trait ExtendsPhysicalDeviceTimelineSemaphoreProperties {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceTimelineSemaphorePropertiesBuilder<'a> {
     type Target = PhysicalDeviceTimelineSemaphoreProperties;
     fn deref(&self) -> &Self::Target {
@@ -28353,6 +28474,7 @@ unsafe impl ExtendsSemaphoreCreateInfo for SemaphoreTypeCreateInfoBuilder<'_> {}
 unsafe impl ExtendsSemaphoreCreateInfo for SemaphoreTypeCreateInfo {}
 unsafe impl ExtendsPhysicalDeviceExternalSemaphoreInfo for SemaphoreTypeCreateInfoBuilder<'_> {}
 unsafe impl ExtendsPhysicalDeviceExternalSemaphoreInfo for SemaphoreTypeCreateInfo {}
+pub unsafe trait ExtendsSemaphoreTypeCreateInfo {}
 impl<'a> ::std::ops::Deref for SemaphoreTypeCreateInfoBuilder<'a> {
     type Target = SemaphoreTypeCreateInfo;
     fn deref(&self) -> &Self::Target {
@@ -28420,6 +28542,7 @@ unsafe impl ExtendsSubmitInfo for TimelineSemaphoreSubmitInfoBuilder<'_> {}
 unsafe impl ExtendsSubmitInfo for TimelineSemaphoreSubmitInfo {}
 unsafe impl ExtendsBindSparseInfo for TimelineSemaphoreSubmitInfoBuilder<'_> {}
 unsafe impl ExtendsBindSparseInfo for TimelineSemaphoreSubmitInfo {}
+pub unsafe trait ExtendsTimelineSemaphoreSubmitInfo {}
 impl<'a> ::std::ops::Deref for TimelineSemaphoreSubmitInfoBuilder<'a> {
     type Target = TimelineSemaphoreSubmitInfo;
     fn deref(&self) -> &Self::Target {
@@ -28694,6 +28817,7 @@ unsafe impl ExtendsPipelineVertexInputStateCreateInfo
     for PipelineVertexInputDivisorStateCreateInfoEXT
 {
 }
+pub unsafe trait ExtendsPipelineVertexInputDivisorStateCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for PipelineVertexInputDivisorStateCreateInfoEXTBuilder<'a> {
     type Target = PipelineVertexInputDivisorStateCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -28756,6 +28880,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceVertexAttributeDivisorPropertiesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceVertexAttributeDivisorPropertiesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'a> {
     type Target = PhysicalDeviceVertexAttributeDivisorPropertiesEXT;
     fn deref(&self) -> &Self::Target {
@@ -28817,6 +28942,7 @@ pub struct PhysicalDevicePCIBusInfoPropertiesEXTBuilder<'a> {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDevicePCIBusInfoPropertiesEXTBuilder<'_> {}
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDevicePCIBusInfoPropertiesEXT {}
+pub unsafe trait ExtendsPhysicalDevicePCIBusInfoPropertiesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDevicePCIBusInfoPropertiesEXTBuilder<'a> {
     type Target = PhysicalDevicePCIBusInfoPropertiesEXT;
     fn deref(&self) -> &Self::Target {
@@ -28884,6 +29010,7 @@ pub struct ImportAndroidHardwareBufferInfoANDROIDBuilder<'a> {
 }
 unsafe impl ExtendsMemoryAllocateInfo for ImportAndroidHardwareBufferInfoANDROIDBuilder<'_> {}
 unsafe impl ExtendsMemoryAllocateInfo for ImportAndroidHardwareBufferInfoANDROID {}
+pub unsafe trait ExtendsImportAndroidHardwareBufferInfoANDROID {}
 impl<'a> ::std::ops::Deref for ImportAndroidHardwareBufferInfoANDROIDBuilder<'a> {
     type Target = ImportAndroidHardwareBufferInfoANDROID;
     fn deref(&self) -> &Self::Target {
@@ -28939,6 +29066,7 @@ pub struct AndroidHardwareBufferUsageANDROIDBuilder<'a> {
 }
 unsafe impl ExtendsImageFormatProperties2 for AndroidHardwareBufferUsageANDROIDBuilder<'_> {}
 unsafe impl ExtendsImageFormatProperties2 for AndroidHardwareBufferUsageANDROID {}
+pub unsafe trait ExtendsAndroidHardwareBufferUsageANDROID {}
 impl<'a> ::std::ops::Deref for AndroidHardwareBufferUsageANDROIDBuilder<'a> {
     type Target = AndroidHardwareBufferUsageANDROID;
     fn deref(&self) -> &Self::Target {
@@ -29162,6 +29290,7 @@ unsafe impl ExtendsAndroidHardwareBufferPropertiesANDROID
     for AndroidHardwareBufferFormatPropertiesANDROID
 {
 }
+pub unsafe trait ExtendsAndroidHardwareBufferFormatPropertiesANDROID {}
 impl<'a> ::std::ops::Deref for AndroidHardwareBufferFormatPropertiesANDROIDBuilder<'a> {
     type Target = AndroidHardwareBufferFormatPropertiesANDROID;
     fn deref(&self) -> &Self::Target {
@@ -29257,6 +29386,7 @@ unsafe impl ExtendsCommandBufferInheritanceInfo
     for CommandBufferInheritanceConditionalRenderingInfoEXT
 {
 }
+pub unsafe trait ExtendsCommandBufferInheritanceConditionalRenderingInfoEXT {}
 impl<'a> ::std::ops::Deref for CommandBufferInheritanceConditionalRenderingInfoEXTBuilder<'a> {
     type Target = CommandBufferInheritanceConditionalRenderingInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -29314,6 +29444,7 @@ unsafe impl ExtendsImageCreateInfo for ExternalFormatANDROIDBuilder<'_> {}
 unsafe impl ExtendsImageCreateInfo for ExternalFormatANDROID {}
 unsafe impl ExtendsSamplerYcbcrConversionCreateInfo for ExternalFormatANDROIDBuilder<'_> {}
 unsafe impl ExtendsSamplerYcbcrConversionCreateInfo for ExternalFormatANDROID {}
+pub unsafe trait ExtendsExternalFormatANDROID {}
 impl<'a> ::std::ops::Deref for ExternalFormatANDROIDBuilder<'a> {
     type Target = ExternalFormatANDROID;
     fn deref(&self) -> &Self::Target {
@@ -29373,6 +29504,7 @@ pub struct PhysicalDevice8BitStorageFeaturesBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDevice8BitStorageFeaturesBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDevice8BitStorageFeatures {}
+pub unsafe trait ExtendsPhysicalDevice8BitStorageFeatures {}
 impl<'a> ::std::ops::Deref for PhysicalDevice8BitStorageFeaturesBuilder<'a> {
     type Target = PhysicalDevice8BitStorageFeatures;
     fn deref(&self) -> &Self::Target {
@@ -29442,6 +29574,7 @@ pub struct PhysicalDeviceConditionalRenderingFeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceConditionalRenderingFeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceConditionalRenderingFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceConditionalRenderingFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceConditionalRenderingFeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceConditionalRenderingFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -29508,6 +29641,7 @@ pub struct PhysicalDeviceVulkanMemoryModelFeaturesBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceVulkanMemoryModelFeaturesBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceVulkanMemoryModelFeatures {}
+pub unsafe trait ExtendsPhysicalDeviceVulkanMemoryModelFeatures {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceVulkanMemoryModelFeaturesBuilder<'a> {
     type Target = PhysicalDeviceVulkanMemoryModelFeatures;
     fn deref(&self) -> &Self::Target {
@@ -29581,6 +29715,7 @@ pub struct PhysicalDeviceShaderAtomicInt64FeaturesBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceShaderAtomicInt64FeaturesBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceShaderAtomicInt64Features {}
+pub unsafe trait ExtendsPhysicalDeviceShaderAtomicInt64Features {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceShaderAtomicInt64FeaturesBuilder<'a> {
     type Target = PhysicalDeviceShaderAtomicInt64Features;
     fn deref(&self) -> &Self::Target {
@@ -29662,6 +29797,7 @@ pub struct PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceShaderAtomicFloatFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceShaderAtomicFloatFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceShaderAtomicFloatFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -29781,6 +29917,7 @@ pub struct PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceVertexAttributeDivisorFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceVertexAttributeDivisorFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceVertexAttributeDivisorFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -29848,6 +29985,7 @@ pub struct QueueFamilyCheckpointPropertiesNVBuilder<'a> {
 }
 unsafe impl ExtendsQueueFamilyProperties2 for QueueFamilyCheckpointPropertiesNVBuilder<'_> {}
 unsafe impl ExtendsQueueFamilyProperties2 for QueueFamilyCheckpointPropertiesNV {}
+pub unsafe trait ExtendsQueueFamilyCheckpointPropertiesNV {}
 impl<'a> ::std::ops::Deref for QueueFamilyCheckpointPropertiesNVBuilder<'a> {
     type Target = QueueFamilyCheckpointPropertiesNV;
     fn deref(&self) -> &Self::Target {
@@ -29989,6 +30127,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceDepthStencilResolveProperties {}
+pub unsafe trait ExtendsPhysicalDeviceDepthStencilResolveProperties {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceDepthStencilResolvePropertiesBuilder<'a> {
     type Target = PhysicalDeviceDepthStencilResolveProperties;
     fn deref(&self) -> &Self::Target {
@@ -30066,6 +30205,7 @@ pub struct SubpassDescriptionDepthStencilResolveBuilder<'a> {
 }
 unsafe impl ExtendsSubpassDescription2 for SubpassDescriptionDepthStencilResolveBuilder<'_> {}
 unsafe impl ExtendsSubpassDescription2 for SubpassDescriptionDepthStencilResolve {}
+pub unsafe trait ExtendsSubpassDescriptionDepthStencilResolve {}
 impl<'a> ::std::ops::Deref for SubpassDescriptionDepthStencilResolveBuilder<'a> {
     type Target = SubpassDescriptionDepthStencilResolve;
     fn deref(&self) -> &Self::Target {
@@ -30132,6 +30272,7 @@ pub struct ImageViewASTCDecodeModeEXTBuilder<'a> {
 }
 unsafe impl ExtendsImageViewCreateInfo for ImageViewASTCDecodeModeEXTBuilder<'_> {}
 unsafe impl ExtendsImageViewCreateInfo for ImageViewASTCDecodeModeEXT {}
+pub unsafe trait ExtendsImageViewASTCDecodeModeEXT {}
 impl<'a> ::std::ops::Deref for ImageViewASTCDecodeModeEXTBuilder<'a> {
     type Target = ImageViewASTCDecodeModeEXT;
     fn deref(&self) -> &Self::Target {
@@ -30187,6 +30328,7 @@ pub struct PhysicalDeviceASTCDecodeFeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceASTCDecodeFeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceASTCDecodeFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceASTCDecodeFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceASTCDecodeFeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceASTCDecodeFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -30244,6 +30386,7 @@ pub struct PhysicalDeviceTransformFeedbackFeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceTransformFeedbackFeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceTransformFeedbackFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceTransformFeedbackFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceTransformFeedbackFeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceTransformFeedbackFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -30324,6 +30467,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceTransformFeedbackPropertiesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceTransformFeedbackPropertiesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceTransformFeedbackPropertiesEXTBuilder<'a> {
     type Target = PhysicalDeviceTransformFeedbackPropertiesEXT;
     fn deref(&self) -> &Self::Target {
@@ -30446,6 +30590,7 @@ unsafe impl ExtendsPipelineRasterizationStateCreateInfo
     for PipelineRasterizationStateStreamCreateInfoEXT
 {
 }
+pub unsafe trait ExtendsPipelineRasterizationStateStreamCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for PipelineRasterizationStateStreamCreateInfoEXTBuilder<'a> {
     type Target = PipelineRasterizationStateStreamCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -30508,6 +30653,7 @@ unsafe impl ExtendsDeviceCreateInfo
 {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceRepresentativeFragmentTestFeaturesNV {}
+pub unsafe trait ExtendsPhysicalDeviceRepresentativeFragmentTestFeaturesNV {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder<'a> {
     type Target = PhysicalDeviceRepresentativeFragmentTestFeaturesNV;
     fn deref(&self) -> &Self::Target {
@@ -30569,6 +30715,7 @@ unsafe impl ExtendsGraphicsPipelineCreateInfo
     for PipelineRepresentativeFragmentTestStateCreateInfoNV
 {
 }
+pub unsafe trait ExtendsPipelineRepresentativeFragmentTestStateCreateInfoNV {}
 impl<'a> ::std::ops::Deref for PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder<'a> {
     type Target = PipelineRepresentativeFragmentTestStateCreateInfoNV;
     fn deref(&self) -> &Self::Target {
@@ -30627,6 +30774,7 @@ pub struct PhysicalDeviceExclusiveScissorFeaturesNVBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceExclusiveScissorFeaturesNVBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceExclusiveScissorFeaturesNV {}
+pub unsafe trait ExtendsPhysicalDeviceExclusiveScissorFeaturesNV {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceExclusiveScissorFeaturesNVBuilder<'a> {
     type Target = PhysicalDeviceExclusiveScissorFeaturesNV;
     fn deref(&self) -> &Self::Target {
@@ -30690,6 +30838,7 @@ unsafe impl ExtendsPipelineViewportStateCreateInfo
     for PipelineViewportExclusiveScissorStateCreateInfoNV
 {
 }
+pub unsafe trait ExtendsPipelineViewportExclusiveScissorStateCreateInfoNV {}
 impl<'a> ::std::ops::Deref for PipelineViewportExclusiveScissorStateCreateInfoNVBuilder<'a> {
     type Target = PipelineViewportExclusiveScissorStateCreateInfoNV;
     fn deref(&self) -> &Self::Target {
@@ -30746,6 +30895,7 @@ pub struct PhysicalDeviceCornerSampledImageFeaturesNVBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceCornerSampledImageFeaturesNVBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceCornerSampledImageFeaturesNV {}
+pub unsafe trait ExtendsPhysicalDeviceCornerSampledImageFeaturesNV {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceCornerSampledImageFeaturesNVBuilder<'a> {
     type Target = PhysicalDeviceCornerSampledImageFeaturesNV;
     fn deref(&self) -> &Self::Target {
@@ -30806,6 +30956,7 @@ unsafe impl ExtendsDeviceCreateInfo
 {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceComputeShaderDerivativesFeaturesNV {}
+pub unsafe trait ExtendsPhysicalDeviceComputeShaderDerivativesFeaturesNV {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder<'a> {
     type Target = PhysicalDeviceComputeShaderDerivativesFeaturesNV;
     fn deref(&self) -> &Self::Target {
@@ -30871,6 +31022,7 @@ unsafe impl ExtendsDeviceCreateInfo
 {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceFragmentShaderBarycentricFeaturesNV {}
+pub unsafe trait ExtendsPhysicalDeviceFragmentShaderBarycentricFeaturesNV {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceFragmentShaderBarycentricFeaturesNVBuilder<'a> {
     type Target = PhysicalDeviceFragmentShaderBarycentricFeaturesNV;
     fn deref(&self) -> &Self::Target {
@@ -30926,6 +31078,7 @@ pub struct PhysicalDeviceShaderImageFootprintFeaturesNVBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceShaderImageFootprintFeaturesNVBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceShaderImageFootprintFeaturesNV {}
+pub unsafe trait ExtendsPhysicalDeviceShaderImageFootprintFeaturesNV {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceShaderImageFootprintFeaturesNVBuilder<'a> {
     type Target = PhysicalDeviceShaderImageFootprintFeaturesNV;
     fn deref(&self) -> &Self::Target {
@@ -30984,6 +31137,7 @@ unsafe impl ExtendsDeviceCreateInfo
 {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV {}
+pub unsafe trait ExtendsPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNVBuilder<'a> {
     type Target = PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV;
     fn deref(&self) -> &Self::Target {
@@ -31109,6 +31263,7 @@ unsafe impl ExtendsPipelineViewportStateCreateInfo
     for PipelineViewportShadingRateImageStateCreateInfoNV
 {
 }
+pub unsafe trait ExtendsPipelineViewportShadingRateImageStateCreateInfoNV {}
 impl<'a> ::std::ops::Deref for PipelineViewportShadingRateImageStateCreateInfoNVBuilder<'a> {
     type Target = PipelineViewportShadingRateImageStateCreateInfoNV;
     fn deref(&self) -> &Self::Target {
@@ -31174,6 +31329,7 @@ pub struct PhysicalDeviceShadingRateImageFeaturesNVBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceShadingRateImageFeaturesNVBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceShadingRateImageFeaturesNV {}
+pub unsafe trait ExtendsPhysicalDeviceShadingRateImageFeaturesNV {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceShadingRateImageFeaturesNVBuilder<'a> {
     type Target = PhysicalDeviceShadingRateImageFeaturesNV;
     fn deref(&self) -> &Self::Target {
@@ -31243,6 +31399,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceShadingRateImagePropertiesNV {}
+pub unsafe trait ExtendsPhysicalDeviceShadingRateImagePropertiesNV {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceShadingRateImagePropertiesNVBuilder<'a> {
     type Target = PhysicalDeviceShadingRateImagePropertiesNV;
     fn deref(&self) -> &Self::Target {
@@ -31432,6 +31589,7 @@ unsafe impl ExtendsPipelineViewportStateCreateInfo
     for PipelineViewportCoarseSampleOrderStateCreateInfoNV
 {
 }
+pub unsafe trait ExtendsPipelineViewportCoarseSampleOrderStateCreateInfoNV {}
 impl<'a> ::std::ops::Deref for PipelineViewportCoarseSampleOrderStateCreateInfoNVBuilder<'a> {
     type Target = PipelineViewportCoarseSampleOrderStateCreateInfoNV;
     fn deref(&self) -> &Self::Target {
@@ -31497,6 +31655,7 @@ pub struct PhysicalDeviceMeshShaderFeaturesNVBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceMeshShaderFeaturesNVBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceMeshShaderFeaturesNV {}
+pub unsafe trait ExtendsPhysicalDeviceMeshShaderFeaturesNV {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceMeshShaderFeaturesNVBuilder<'a> {
     type Target = PhysicalDeviceMeshShaderFeaturesNV;
     fn deref(&self) -> &Self::Target {
@@ -31580,6 +31739,7 @@ pub struct PhysicalDeviceMeshShaderPropertiesNVBuilder<'a> {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceMeshShaderPropertiesNVBuilder<'_> {}
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceMeshShaderPropertiesNV {}
+pub unsafe trait ExtendsPhysicalDeviceMeshShaderPropertiesNV {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceMeshShaderPropertiesNVBuilder<'a> {
     type Target = PhysicalDeviceMeshShaderPropertiesNV;
     fn deref(&self) -> &Self::Target {
@@ -32783,6 +32943,7 @@ pub struct WriteDescriptorSetAccelerationStructureKHRBuilder<'a> {
 }
 unsafe impl ExtendsWriteDescriptorSet for WriteDescriptorSetAccelerationStructureKHRBuilder<'_> {}
 unsafe impl ExtendsWriteDescriptorSet for WriteDescriptorSetAccelerationStructureKHR {}
+pub unsafe trait ExtendsWriteDescriptorSetAccelerationStructureKHR {}
 impl<'a> ::std::ops::Deref for WriteDescriptorSetAccelerationStructureKHRBuilder<'a> {
     type Target = WriteDescriptorSetAccelerationStructureKHR;
     fn deref(&self) -> &Self::Target {
@@ -32844,6 +33005,7 @@ pub struct WriteDescriptorSetAccelerationStructureNVBuilder<'a> {
 }
 unsafe impl ExtendsWriteDescriptorSet for WriteDescriptorSetAccelerationStructureNVBuilder<'_> {}
 unsafe impl ExtendsWriteDescriptorSet for WriteDescriptorSetAccelerationStructureNV {}
+pub unsafe trait ExtendsWriteDescriptorSetAccelerationStructureNV {}
 impl<'a> ::std::ops::Deref for WriteDescriptorSetAccelerationStructureNVBuilder<'a> {
     type Target = WriteDescriptorSetAccelerationStructureNV;
     fn deref(&self) -> &Self::Target {
@@ -32991,6 +33153,7 @@ pub struct PhysicalDeviceAccelerationStructureFeaturesKHRBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceAccelerationStructureFeaturesKHRBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceAccelerationStructureFeaturesKHR {}
+pub unsafe trait ExtendsPhysicalDeviceAccelerationStructureFeaturesKHR {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceAccelerationStructureFeaturesKHRBuilder<'a> {
     type Target = PhysicalDeviceAccelerationStructureFeaturesKHR;
     fn deref(&self) -> &Self::Target {
@@ -33087,6 +33250,7 @@ pub struct PhysicalDeviceRayTracingPipelineFeaturesKHRBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceRayTracingPipelineFeaturesKHRBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceRayTracingPipelineFeaturesKHR {}
+pub unsafe trait ExtendsPhysicalDeviceRayTracingPipelineFeaturesKHR {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceRayTracingPipelineFeaturesKHRBuilder<'a> {
     type Target = PhysicalDeviceRayTracingPipelineFeaturesKHR;
     fn deref(&self) -> &Self::Target {
@@ -33175,6 +33339,7 @@ pub struct PhysicalDeviceRayQueryFeaturesKHRBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceRayQueryFeaturesKHRBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceRayQueryFeaturesKHR {}
+pub unsafe trait ExtendsPhysicalDeviceRayQueryFeaturesKHR {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceRayQueryFeaturesKHRBuilder<'a> {
     type Target = PhysicalDeviceRayQueryFeaturesKHR;
     fn deref(&self) -> &Self::Target {
@@ -33247,6 +33412,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceAccelerationStructurePropertiesKHR {}
+pub unsafe trait ExtendsPhysicalDeviceAccelerationStructurePropertiesKHR {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceAccelerationStructurePropertiesKHRBuilder<'a> {
     type Target = PhysicalDeviceAccelerationStructurePropertiesKHR;
     fn deref(&self) -> &Self::Target {
@@ -33370,6 +33536,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceRayTracingPipelinePropertiesKHR {}
+pub unsafe trait ExtendsPhysicalDeviceRayTracingPipelinePropertiesKHR {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceRayTracingPipelinePropertiesKHRBuilder<'a> {
     type Target = PhysicalDeviceRayTracingPipelinePropertiesKHR;
     fn deref(&self) -> &Self::Target {
@@ -33474,6 +33641,7 @@ pub struct PhysicalDeviceRayTracingPropertiesNVBuilder<'a> {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceRayTracingPropertiesNVBuilder<'_> {}
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceRayTracingPropertiesNV {}
+pub unsafe trait ExtendsPhysicalDeviceRayTracingPropertiesNV {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceRayTracingPropertiesNVBuilder<'a> {
     type Target = PhysicalDeviceRayTracingPropertiesNV;
     fn deref(&self) -> &Self::Target {
@@ -33667,6 +33835,7 @@ pub struct DrmFormatModifierPropertiesListEXTBuilder<'a> {
 }
 unsafe impl ExtendsFormatProperties2 for DrmFormatModifierPropertiesListEXTBuilder<'_> {}
 unsafe impl ExtendsFormatProperties2 for DrmFormatModifierPropertiesListEXT {}
+pub unsafe trait ExtendsDrmFormatModifierPropertiesListEXT {}
 impl<'a> ::std::ops::Deref for DrmFormatModifierPropertiesListEXTBuilder<'a> {
     type Target = DrmFormatModifierPropertiesListEXT;
     fn deref(&self) -> &Self::Target {
@@ -33790,6 +33959,7 @@ unsafe impl ExtendsPhysicalDeviceImageFormatInfo2
 {
 }
 unsafe impl ExtendsPhysicalDeviceImageFormatInfo2 for PhysicalDeviceImageDrmFormatModifierInfoEXT {}
+pub unsafe trait ExtendsPhysicalDeviceImageDrmFormatModifierInfoEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceImageDrmFormatModifierInfoEXTBuilder<'a> {
     type Target = PhysicalDeviceImageDrmFormatModifierInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -33856,6 +34026,7 @@ pub struct ImageDrmFormatModifierListCreateInfoEXTBuilder<'a> {
 }
 unsafe impl ExtendsImageCreateInfo for ImageDrmFormatModifierListCreateInfoEXTBuilder<'_> {}
 unsafe impl ExtendsImageCreateInfo for ImageDrmFormatModifierListCreateInfoEXT {}
+pub unsafe trait ExtendsImageDrmFormatModifierListCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for ImageDrmFormatModifierListCreateInfoEXTBuilder<'a> {
     type Target = ImageDrmFormatModifierListCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -33916,6 +34087,7 @@ pub struct ImageDrmFormatModifierExplicitCreateInfoEXTBuilder<'a> {
 }
 unsafe impl ExtendsImageCreateInfo for ImageDrmFormatModifierExplicitCreateInfoEXTBuilder<'_> {}
 unsafe impl ExtendsImageCreateInfo for ImageDrmFormatModifierExplicitCreateInfoEXT {}
+pub unsafe trait ExtendsImageDrmFormatModifierExplicitCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for ImageDrmFormatModifierExplicitCreateInfoEXTBuilder<'a> {
     type Target = ImageDrmFormatModifierExplicitCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -34049,6 +34221,7 @@ unsafe impl ExtendsImageCreateInfo for ImageStencilUsageCreateInfoBuilder<'_> {}
 unsafe impl ExtendsImageCreateInfo for ImageStencilUsageCreateInfo {}
 unsafe impl ExtendsPhysicalDeviceImageFormatInfo2 for ImageStencilUsageCreateInfoBuilder<'_> {}
 unsafe impl ExtendsPhysicalDeviceImageFormatInfo2 for ImageStencilUsageCreateInfo {}
+pub unsafe trait ExtendsImageStencilUsageCreateInfo {}
 impl<'a> ::std::ops::Deref for ImageStencilUsageCreateInfoBuilder<'a> {
     type Target = ImageStencilUsageCreateInfo;
     fn deref(&self) -> &Self::Target {
@@ -34104,6 +34277,7 @@ pub struct DeviceMemoryOverallocationCreateInfoAMDBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for DeviceMemoryOverallocationCreateInfoAMDBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for DeviceMemoryOverallocationCreateInfoAMD {}
+pub unsafe trait ExtendsDeviceMemoryOverallocationCreateInfoAMD {}
 impl<'a> ::std::ops::Deref for DeviceMemoryOverallocationCreateInfoAMDBuilder<'a> {
     type Target = DeviceMemoryOverallocationCreateInfoAMD;
     fn deref(&self) -> &Self::Target {
@@ -34166,6 +34340,7 @@ pub struct PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceFragmentDensityMapFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceFragmentDensityMapFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceFragmentDensityMapFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -34233,6 +34408,7 @@ pub struct PhysicalDeviceFragmentDensityMap2FeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceFragmentDensityMap2FeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceFragmentDensityMap2FeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceFragmentDensityMap2FeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceFragmentDensityMap2FeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceFragmentDensityMap2FeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -34295,6 +34471,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceFragmentDensityMapPropertiesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceFragmentDensityMapPropertiesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceFragmentDensityMapPropertiesEXTBuilder<'a> {
     type Target = PhysicalDeviceFragmentDensityMapPropertiesEXT;
     fn deref(&self) -> &Self::Target {
@@ -34373,6 +34550,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceFragmentDensityMap2PropertiesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceFragmentDensityMap2PropertiesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceFragmentDensityMap2PropertiesEXTBuilder<'a> {
     type Target = PhysicalDeviceFragmentDensityMap2PropertiesEXT;
     fn deref(&self) -> &Self::Target {
@@ -34449,6 +34627,7 @@ unsafe impl ExtendsRenderPassCreateInfo for RenderPassFragmentDensityMapCreateIn
 unsafe impl ExtendsRenderPassCreateInfo for RenderPassFragmentDensityMapCreateInfoEXT {}
 unsafe impl ExtendsRenderPassCreateInfo2 for RenderPassFragmentDensityMapCreateInfoEXTBuilder<'_> {}
 unsafe impl ExtendsRenderPassCreateInfo2 for RenderPassFragmentDensityMapCreateInfoEXT {}
+pub unsafe trait ExtendsRenderPassFragmentDensityMapCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for RenderPassFragmentDensityMapCreateInfoEXTBuilder<'a> {
     type Target = RenderPassFragmentDensityMapCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -34507,6 +34686,7 @@ pub struct PhysicalDeviceScalarBlockLayoutFeaturesBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceScalarBlockLayoutFeaturesBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceScalarBlockLayoutFeatures {}
+pub unsafe trait ExtendsPhysicalDeviceScalarBlockLayoutFeatures {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceScalarBlockLayoutFeaturesBuilder<'a> {
     type Target = PhysicalDeviceScalarBlockLayoutFeatures;
     fn deref(&self) -> &Self::Target {
@@ -34562,6 +34742,7 @@ pub struct SurfaceProtectedCapabilitiesKHRBuilder<'a> {
 }
 unsafe impl ExtendsSurfaceCapabilities2KHR for SurfaceProtectedCapabilitiesKHRBuilder<'_> {}
 unsafe impl ExtendsSurfaceCapabilities2KHR for SurfaceProtectedCapabilitiesKHR {}
+pub unsafe trait ExtendsSurfaceProtectedCapabilitiesKHR {}
 impl<'a> ::std::ops::Deref for SurfaceProtectedCapabilitiesKHRBuilder<'a> {
     type Target = SurfaceProtectedCapabilitiesKHR;
     fn deref(&self) -> &Self::Target {
@@ -34620,6 +34801,7 @@ unsafe impl ExtendsDeviceCreateInfo
 {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceUniformBufferStandardLayoutFeatures {}
+pub unsafe trait ExtendsPhysicalDeviceUniformBufferStandardLayoutFeatures {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceUniformBufferStandardLayoutFeaturesBuilder<'a> {
     type Target = PhysicalDeviceUniformBufferStandardLayoutFeatures;
     fn deref(&self) -> &Self::Target {
@@ -34675,6 +34857,7 @@ pub struct PhysicalDeviceDepthClipEnableFeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceDepthClipEnableFeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceDepthClipEnableFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceDepthClipEnableFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceDepthClipEnableFeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceDepthClipEnableFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -34738,6 +34921,7 @@ unsafe impl ExtendsPipelineRasterizationStateCreateInfo
     for PipelineRasterizationDepthClipStateCreateInfoEXT
 {
 }
+pub unsafe trait ExtendsPipelineRasterizationDepthClipStateCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for PipelineRasterizationDepthClipStateCreateInfoEXTBuilder<'a> {
     type Target = PipelineRasterizationDepthClipStateCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -34802,6 +34986,7 @@ unsafe impl ExtendsPhysicalDeviceMemoryProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceMemoryProperties2 for PhysicalDeviceMemoryBudgetPropertiesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceMemoryBudgetPropertiesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceMemoryBudgetPropertiesEXTBuilder<'a> {
     type Target = PhysicalDeviceMemoryBudgetPropertiesEXT;
     fn deref(&self) -> &Self::Target {
@@ -34861,6 +35046,7 @@ pub struct PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceMemoryPriorityFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceMemoryPriorityFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceMemoryPriorityFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -34916,6 +35102,7 @@ pub struct MemoryPriorityAllocateInfoEXTBuilder<'a> {
 }
 unsafe impl ExtendsMemoryAllocateInfo for MemoryPriorityAllocateInfoEXTBuilder<'_> {}
 unsafe impl ExtendsMemoryAllocateInfo for MemoryPriorityAllocateInfoEXT {}
+pub unsafe trait ExtendsMemoryPriorityAllocateInfoEXT {}
 impl<'a> ::std::ops::Deref for MemoryPriorityAllocateInfoEXTBuilder<'a> {
     type Target = MemoryPriorityAllocateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -34975,6 +35162,7 @@ pub struct PhysicalDeviceBufferDeviceAddressFeaturesBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceBufferDeviceAddressFeaturesBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceBufferDeviceAddressFeatures {}
+pub unsafe trait ExtendsPhysicalDeviceBufferDeviceAddressFeatures {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceBufferDeviceAddressFeaturesBuilder<'a> {
     type Target = PhysicalDeviceBufferDeviceAddressFeatures;
     fn deref(&self) -> &Self::Target {
@@ -35049,6 +35237,7 @@ pub struct PhysicalDeviceBufferDeviceAddressFeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceBufferDeviceAddressFeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceBufferDeviceAddressFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceBufferDeviceAddressFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceBufferDeviceAddressFeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceBufferDeviceAddressFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -35187,6 +35376,7 @@ pub struct BufferOpaqueCaptureAddressCreateInfoBuilder<'a> {
 }
 unsafe impl ExtendsBufferCreateInfo for BufferOpaqueCaptureAddressCreateInfoBuilder<'_> {}
 unsafe impl ExtendsBufferCreateInfo for BufferOpaqueCaptureAddressCreateInfo {}
+pub unsafe trait ExtendsBufferOpaqueCaptureAddressCreateInfo {}
 impl<'a> ::std::ops::Deref for BufferOpaqueCaptureAddressCreateInfoBuilder<'a> {
     type Target = BufferOpaqueCaptureAddressCreateInfo;
     fn deref(&self) -> &Self::Target {
@@ -35242,6 +35432,7 @@ pub struct BufferDeviceAddressCreateInfoEXTBuilder<'a> {
 }
 unsafe impl ExtendsBufferCreateInfo for BufferDeviceAddressCreateInfoEXTBuilder<'_> {}
 unsafe impl ExtendsBufferCreateInfo for BufferDeviceAddressCreateInfoEXT {}
+pub unsafe trait ExtendsBufferDeviceAddressCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for BufferDeviceAddressCreateInfoEXTBuilder<'a> {
     type Target = BufferDeviceAddressCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -35300,6 +35491,7 @@ unsafe impl ExtendsPhysicalDeviceImageFormatInfo2
 {
 }
 unsafe impl ExtendsPhysicalDeviceImageFormatInfo2 for PhysicalDeviceImageViewImageFormatInfoEXT {}
+pub unsafe trait ExtendsPhysicalDeviceImageViewImageFormatInfoEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceImageViewImageFormatInfoEXTBuilder<'a> {
     type Target = PhysicalDeviceImageViewImageFormatInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -35360,6 +35552,7 @@ unsafe impl ExtendsImageFormatProperties2
 {
 }
 unsafe impl ExtendsImageFormatProperties2 for FilterCubicImageViewImageFormatPropertiesEXT {}
+pub unsafe trait ExtendsFilterCubicImageViewImageFormatPropertiesEXT {}
 impl<'a> ::std::ops::Deref for FilterCubicImageViewImageFormatPropertiesEXTBuilder<'a> {
     type Target = FilterCubicImageViewImageFormatPropertiesEXT;
     fn deref(&self) -> &Self::Target {
@@ -35419,6 +35612,7 @@ pub struct PhysicalDeviceImagelessFramebufferFeaturesBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceImagelessFramebufferFeaturesBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceImagelessFramebufferFeatures {}
+pub unsafe trait ExtendsPhysicalDeviceImagelessFramebufferFeatures {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceImagelessFramebufferFeaturesBuilder<'a> {
     type Target = PhysicalDeviceImagelessFramebufferFeatures;
     fn deref(&self) -> &Self::Target {
@@ -35476,6 +35670,7 @@ pub struct FramebufferAttachmentsCreateInfoBuilder<'a> {
 }
 unsafe impl ExtendsFramebufferCreateInfo for FramebufferAttachmentsCreateInfoBuilder<'_> {}
 unsafe impl ExtendsFramebufferCreateInfo for FramebufferAttachmentsCreateInfo {}
+pub unsafe trait ExtendsFramebufferAttachmentsCreateInfo {}
 impl<'a> ::std::ops::Deref for FramebufferAttachmentsCreateInfoBuilder<'a> {
     type Target = FramebufferAttachmentsCreateInfo;
     fn deref(&self) -> &Self::Target {
@@ -35638,6 +35833,7 @@ pub struct RenderPassAttachmentBeginInfoBuilder<'a> {
 }
 unsafe impl ExtendsRenderPassBeginInfo for RenderPassAttachmentBeginInfoBuilder<'_> {}
 unsafe impl ExtendsRenderPassBeginInfo for RenderPassAttachmentBeginInfo {}
+pub unsafe trait ExtendsRenderPassAttachmentBeginInfo {}
 impl<'a> ::std::ops::Deref for RenderPassAttachmentBeginInfoBuilder<'a> {
     type Target = RenderPassAttachmentBeginInfo;
     fn deref(&self) -> &Self::Target {
@@ -35697,6 +35893,7 @@ unsafe impl ExtendsDeviceCreateInfo
 {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceTextureCompressionASTCHDRFeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -35754,6 +35951,7 @@ pub struct PhysicalDeviceCooperativeMatrixFeaturesNVBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceCooperativeMatrixFeaturesNVBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceCooperativeMatrixFeaturesNV {}
+pub unsafe trait ExtendsPhysicalDeviceCooperativeMatrixFeaturesNV {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceCooperativeMatrixFeaturesNVBuilder<'a> {
     type Target = PhysicalDeviceCooperativeMatrixFeaturesNV;
     fn deref(&self) -> &Self::Target {
@@ -35820,6 +36018,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceCooperativeMatrixPropertiesNV {}
+pub unsafe trait ExtendsPhysicalDeviceCooperativeMatrixPropertiesNV {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceCooperativeMatrixPropertiesNVBuilder<'a> {
     type Target = PhysicalDeviceCooperativeMatrixPropertiesNV;
     fn deref(&self) -> &Self::Target {
@@ -35988,6 +36187,7 @@ pub struct PhysicalDeviceYcbcrImageArraysFeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceYcbcrImageArraysFeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceYcbcrImageArraysFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceYcbcrImageArraysFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceYcbcrImageArraysFeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceYcbcrImageArraysFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -36197,6 +36397,7 @@ pub struct PresentFrameTokenGGPBuilder<'a> {
 }
 unsafe impl ExtendsPresentInfoKHR for PresentFrameTokenGGPBuilder<'_> {}
 unsafe impl ExtendsPresentInfoKHR for PresentFrameTokenGGP {}
+pub unsafe trait ExtendsPresentFrameTokenGGP {}
 impl<'a> ::std::ops::Deref for PresentFrameTokenGGPBuilder<'a> {
     type Target = PresentFrameTokenGGP;
     fn deref(&self) -> &Self::Target {
@@ -36315,6 +36516,7 @@ unsafe impl ExtendsRayTracingPipelineCreateInfoKHR
 {
 }
 unsafe impl ExtendsRayTracingPipelineCreateInfoKHR for PipelineCreationFeedbackCreateInfoEXT {}
+pub unsafe trait ExtendsPipelineCreationFeedbackCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for PipelineCreationFeedbackCreateInfoEXTBuilder<'a> {
     type Target = PipelineCreationFeedbackCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -36385,6 +36587,7 @@ unsafe impl ExtendsPhysicalDeviceSurfaceInfo2KHR for SurfaceFullScreenExclusiveI
 unsafe impl ExtendsPhysicalDeviceSurfaceInfo2KHR for SurfaceFullScreenExclusiveInfoEXT {}
 unsafe impl ExtendsSwapchainCreateInfoKHR for SurfaceFullScreenExclusiveInfoEXTBuilder<'_> {}
 unsafe impl ExtendsSwapchainCreateInfoKHR for SurfaceFullScreenExclusiveInfoEXT {}
+pub unsafe trait ExtendsSurfaceFullScreenExclusiveInfoEXT {}
 impl<'a> ::std::ops::Deref for SurfaceFullScreenExclusiveInfoEXTBuilder<'a> {
     type Target = SurfaceFullScreenExclusiveInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -36445,6 +36648,7 @@ unsafe impl ExtendsPhysicalDeviceSurfaceInfo2KHR
 unsafe impl ExtendsPhysicalDeviceSurfaceInfo2KHR for SurfaceFullScreenExclusiveWin32InfoEXT {}
 unsafe impl ExtendsSwapchainCreateInfoKHR for SurfaceFullScreenExclusiveWin32InfoEXTBuilder<'_> {}
 unsafe impl ExtendsSwapchainCreateInfoKHR for SurfaceFullScreenExclusiveWin32InfoEXT {}
+pub unsafe trait ExtendsSurfaceFullScreenExclusiveWin32InfoEXT {}
 impl<'a> ::std::ops::Deref for SurfaceFullScreenExclusiveWin32InfoEXTBuilder<'a> {
     type Target = SurfaceFullScreenExclusiveWin32InfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -36503,6 +36707,7 @@ unsafe impl ExtendsSurfaceCapabilities2KHR
 {
 }
 unsafe impl ExtendsSurfaceCapabilities2KHR for SurfaceCapabilitiesFullScreenExclusiveEXT {}
+pub unsafe trait ExtendsSurfaceCapabilitiesFullScreenExclusiveEXT {}
 impl<'a> ::std::ops::Deref for SurfaceCapabilitiesFullScreenExclusiveEXTBuilder<'a> {
     type Target = SurfaceCapabilitiesFullScreenExclusiveEXT;
     fn deref(&self) -> &Self::Target {
@@ -36563,6 +36768,7 @@ pub struct PhysicalDevicePerformanceQueryFeaturesKHRBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDevicePerformanceQueryFeaturesKHRBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDevicePerformanceQueryFeaturesKHR {}
+pub unsafe trait ExtendsPhysicalDevicePerformanceQueryFeaturesKHR {}
 impl<'a> ::std::ops::Deref for PhysicalDevicePerformanceQueryFeaturesKHRBuilder<'a> {
     type Target = PhysicalDevicePerformanceQueryFeaturesKHR;
     fn deref(&self) -> &Self::Target {
@@ -36632,6 +36838,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDevicePerformanceQueryPropertiesKHR {}
+pub unsafe trait ExtendsPhysicalDevicePerformanceQueryPropertiesKHR {}
 impl<'a> ::std::ops::Deref for PhysicalDevicePerformanceQueryPropertiesKHRBuilder<'a> {
     type Target = PhysicalDevicePerformanceQueryPropertiesKHR;
     fn deref(&self) -> &Self::Target {
@@ -36887,6 +37094,7 @@ pub struct QueryPoolPerformanceCreateInfoKHRBuilder<'a> {
 }
 unsafe impl ExtendsQueryPoolCreateInfo for QueryPoolPerformanceCreateInfoKHRBuilder<'_> {}
 unsafe impl ExtendsQueryPoolCreateInfo for QueryPoolPerformanceCreateInfoKHR {}
+pub unsafe trait ExtendsQueryPoolPerformanceCreateInfoKHR {}
 impl<'a> ::std::ops::Deref for QueryPoolPerformanceCreateInfoKHRBuilder<'a> {
     type Target = QueryPoolPerformanceCreateInfoKHR;
     fn deref(&self) -> &Self::Target {
@@ -37039,6 +37247,7 @@ unsafe impl ExtendsSubmitInfo for PerformanceQuerySubmitInfoKHRBuilder<'_> {}
 unsafe impl ExtendsSubmitInfo for PerformanceQuerySubmitInfoKHR {}
 unsafe impl ExtendsSubmitInfo2KHR for PerformanceQuerySubmitInfoKHRBuilder<'_> {}
 unsafe impl ExtendsSubmitInfo2KHR for PerformanceQuerySubmitInfoKHR {}
+pub unsafe trait ExtendsPerformanceQuerySubmitInfoKHR {}
 impl<'a> ::std::ops::Deref for PerformanceQuerySubmitInfoKHRBuilder<'a> {
     type Target = PerformanceQuerySubmitInfoKHR;
     fn deref(&self) -> &Self::Target {
@@ -37162,6 +37371,7 @@ pub struct PhysicalDeviceCoverageReductionModeFeaturesNVBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceCoverageReductionModeFeaturesNVBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceCoverageReductionModeFeaturesNV {}
+pub unsafe trait ExtendsPhysicalDeviceCoverageReductionModeFeaturesNV {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceCoverageReductionModeFeaturesNVBuilder<'a> {
     type Target = PhysicalDeviceCoverageReductionModeFeaturesNV;
     fn deref(&self) -> &Self::Target {
@@ -37225,6 +37435,7 @@ unsafe impl ExtendsPipelineMultisampleStateCreateInfo
     for PipelineCoverageReductionStateCreateInfoNV
 {
 }
+pub unsafe trait ExtendsPipelineCoverageReductionStateCreateInfoNV {}
 impl<'a> ::std::ops::Deref for PipelineCoverageReductionStateCreateInfoNVBuilder<'a> {
     type Target = PipelineCoverageReductionStateCreateInfoNV;
     fn deref(&self) -> &Self::Target {
@@ -37382,6 +37593,7 @@ unsafe impl ExtendsDeviceCreateInfo
 {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {}
+pub unsafe trait ExtendsPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceShaderIntegerFunctions2FeaturesINTELBuilder<'a> {
     type Target = PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL;
     fn deref(&self) -> &Self::Target {
@@ -37578,6 +37790,7 @@ pub struct QueryPoolPerformanceQueryCreateInfoINTELBuilder<'a> {
 }
 unsafe impl ExtendsQueryPoolCreateInfo for QueryPoolPerformanceQueryCreateInfoINTELBuilder<'_> {}
 unsafe impl ExtendsQueryPoolCreateInfo for QueryPoolPerformanceQueryCreateInfoINTEL {}
+pub unsafe trait ExtendsQueryPoolPerformanceQueryCreateInfoINTEL {}
 impl<'a> ::std::ops::Deref for QueryPoolPerformanceQueryCreateInfoINTELBuilder<'a> {
     type Target = QueryPoolPerformanceQueryCreateInfoINTEL;
     fn deref(&self) -> &Self::Target {
@@ -37928,6 +38141,7 @@ pub struct PhysicalDeviceShaderClockFeaturesKHRBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceShaderClockFeaturesKHRBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceShaderClockFeaturesKHR {}
+pub unsafe trait ExtendsPhysicalDeviceShaderClockFeaturesKHR {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceShaderClockFeaturesKHRBuilder<'a> {
     type Target = PhysicalDeviceShaderClockFeaturesKHR;
     fn deref(&self) -> &Self::Target {
@@ -37987,6 +38201,7 @@ pub struct PhysicalDeviceIndexTypeUint8FeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceIndexTypeUint8FeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceIndexTypeUint8FeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceIndexTypeUint8FeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceIndexTypeUint8FeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceIndexTypeUint8FeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -38047,6 +38262,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceShaderSMBuiltinsPropertiesNV {}
+pub unsafe trait ExtendsPhysicalDeviceShaderSMBuiltinsPropertiesNV {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilder<'a> {
     type Target = PhysicalDeviceShaderSMBuiltinsPropertiesNV;
     fn deref(&self) -> &Self::Target {
@@ -38106,6 +38322,7 @@ pub struct PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceShaderSMBuiltinsFeaturesNV {}
+pub unsafe trait ExtendsPhysicalDeviceShaderSMBuiltinsFeaturesNV {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder<'a> {
     type Target = PhysicalDeviceShaderSMBuiltinsFeaturesNV;
     fn deref(&self) -> &Self::Target {
@@ -38168,6 +38385,7 @@ unsafe impl ExtendsDeviceCreateInfo
 {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceFragmentShaderInterlockFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceFragmentShaderInterlockFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceFragmentShaderInterlockFeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceFragmentShaderInterlockFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -38244,6 +38462,7 @@ unsafe impl ExtendsDeviceCreateInfo
 {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceSeparateDepthStencilLayoutsFeatures {}
+pub unsafe trait ExtendsPhysicalDeviceSeparateDepthStencilLayoutsFeatures {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceSeparateDepthStencilLayoutsFeaturesBuilder<'a> {
     type Target = PhysicalDeviceSeparateDepthStencilLayoutsFeatures;
     fn deref(&self) -> &Self::Target {
@@ -38299,6 +38518,7 @@ pub struct AttachmentReferenceStencilLayoutBuilder<'a> {
 }
 unsafe impl ExtendsAttachmentReference2 for AttachmentReferenceStencilLayoutBuilder<'_> {}
 unsafe impl ExtendsAttachmentReference2 for AttachmentReferenceStencilLayout {}
+pub unsafe trait ExtendsAttachmentReferenceStencilLayout {}
 impl<'a> ::std::ops::Deref for AttachmentReferenceStencilLayoutBuilder<'a> {
     type Target = AttachmentReferenceStencilLayout;
     fn deref(&self) -> &Self::Target {
@@ -38356,6 +38576,7 @@ pub struct AttachmentDescriptionStencilLayoutBuilder<'a> {
 }
 unsafe impl ExtendsAttachmentDescription2 for AttachmentDescriptionStencilLayoutBuilder<'_> {}
 unsafe impl ExtendsAttachmentDescription2 for AttachmentDescriptionStencilLayout {}
+pub unsafe trait ExtendsAttachmentDescriptionStencilLayout {}
 impl<'a> ::std::ops::Deref for AttachmentDescriptionStencilLayoutBuilder<'a> {
     type Target = AttachmentDescriptionStencilLayout;
     fn deref(&self) -> &Self::Target {
@@ -38418,6 +38639,7 @@ unsafe impl ExtendsDeviceCreateInfo
 {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDevicePipelineExecutablePropertiesFeaturesKHR {}
+pub unsafe trait ExtendsPhysicalDevicePipelineExecutablePropertiesFeaturesKHR {}
 impl<'a> ::std::ops::Deref for PhysicalDevicePipelineExecutablePropertiesFeaturesKHRBuilder<'a> {
     type Target = PhysicalDevicePipelineExecutablePropertiesFeaturesKHR;
     fn deref(&self) -> &Self::Target {
@@ -38945,6 +39167,7 @@ unsafe impl ExtendsDeviceCreateInfo
 {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -39005,6 +39228,7 @@ pub struct PhysicalDeviceTexelBufferAlignmentFeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceTexelBufferAlignmentFeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceTexelBufferAlignmentFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceTexelBufferAlignmentFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceTexelBufferAlignmentFeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceTexelBufferAlignmentFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -39069,6 +39293,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceTexelBufferAlignmentPropertiesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceTexelBufferAlignmentPropertiesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceTexelBufferAlignmentPropertiesEXTBuilder<'a> {
     type Target = PhysicalDeviceTexelBufferAlignmentPropertiesEXT;
     fn deref(&self) -> &Self::Target {
@@ -39156,6 +39381,7 @@ pub struct PhysicalDeviceSubgroupSizeControlFeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceSubgroupSizeControlFeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceSubgroupSizeControlFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceSubgroupSizeControlFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceSubgroupSizeControlFeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceSubgroupSizeControlFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -39224,6 +39450,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceSubgroupSizeControlPropertiesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceSubgroupSizeControlPropertiesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceSubgroupSizeControlPropertiesEXTBuilder<'a> {
     type Target = PhysicalDeviceSubgroupSizeControlPropertiesEXT;
     fn deref(&self) -> &Self::Target {
@@ -39300,6 +39527,7 @@ unsafe impl ExtendsPipelineShaderStageCreateInfo
     for PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT
 {
 }
+pub unsafe trait ExtendsPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for PipelineShaderStageRequiredSubgroupSizeCreateInfoEXTBuilder<'a> {
     type Target = PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -39355,6 +39583,7 @@ pub struct MemoryOpaqueCaptureAddressAllocateInfoBuilder<'a> {
 }
 unsafe impl ExtendsMemoryAllocateInfo for MemoryOpaqueCaptureAddressAllocateInfoBuilder<'_> {}
 unsafe impl ExtendsMemoryAllocateInfo for MemoryOpaqueCaptureAddressAllocateInfo {}
+pub unsafe trait ExtendsMemoryOpaqueCaptureAddressAllocateInfo {}
 impl<'a> ::std::ops::Deref for MemoryOpaqueCaptureAddressAllocateInfoBuilder<'a> {
     type Target = MemoryOpaqueCaptureAddressAllocateInfo;
     fn deref(&self) -> &Self::Target {
@@ -39491,6 +39720,7 @@ pub struct PhysicalDeviceLineRasterizationFeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceLineRasterizationFeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceLineRasterizationFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceLineRasterizationFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceLineRasterizationFeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceLineRasterizationFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -39569,6 +39799,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceLineRasterizationPropertiesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceLineRasterizationPropertiesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceLineRasterizationPropertiesEXTBuilder<'a> {
     type Target = PhysicalDeviceLineRasterizationPropertiesEXT;
     fn deref(&self) -> &Self::Target {
@@ -39636,6 +39867,7 @@ unsafe impl ExtendsPipelineRasterizationStateCreateInfo
     for PipelineRasterizationLineStateCreateInfoEXT
 {
 }
+pub unsafe trait ExtendsPipelineRasterizationLineStateCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for PipelineRasterizationLineStateCreateInfoEXTBuilder<'a> {
     type Target = PipelineRasterizationLineStateCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -39709,6 +39941,7 @@ unsafe impl ExtendsDeviceCreateInfo
 {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDevicePipelineCreationCacheControlFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDevicePipelineCreationCacheControlFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDevicePipelineCreationCacheControlFeaturesEXTBuilder<'a> {
     type Target = PhysicalDevicePipelineCreationCacheControlFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -39789,6 +40022,7 @@ pub struct PhysicalDeviceVulkan11FeaturesBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceVulkan11FeaturesBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceVulkan11Features {}
+pub unsafe trait ExtendsPhysicalDeviceVulkan11Features {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceVulkan11FeaturesBuilder<'a> {
     type Target = PhysicalDeviceVulkan11Features;
     fn deref(&self) -> &Self::Target {
@@ -39923,6 +40157,7 @@ pub struct PhysicalDeviceVulkan11PropertiesBuilder<'a> {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceVulkan11PropertiesBuilder<'_> {}
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceVulkan11Properties {}
+pub unsafe trait ExtendsPhysicalDeviceVulkan11Properties {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceVulkan11PropertiesBuilder<'a> {
     type Target = PhysicalDeviceVulkan11Properties;
     fn deref(&self) -> &Self::Target {
@@ -40139,6 +40374,7 @@ pub struct PhysicalDeviceVulkan12FeaturesBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceVulkan12FeaturesBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceVulkan12Features {}
+pub unsafe trait ExtendsPhysicalDeviceVulkan12Features {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceVulkan12FeaturesBuilder<'a> {
     type Target = PhysicalDeviceVulkan12Features;
     fn deref(&self) -> &Self::Target {
@@ -40787,6 +41023,7 @@ pub struct PhysicalDeviceVulkan12PropertiesBuilder<'a> {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceVulkan12PropertiesBuilder<'_> {}
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceVulkan12Properties {}
+pub unsafe trait ExtendsPhysicalDeviceVulkan12Properties {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceVulkan12PropertiesBuilder<'a> {
     type Target = PhysicalDeviceVulkan12Properties;
     fn deref(&self) -> &Self::Target {
@@ -41221,6 +41458,7 @@ unsafe impl ExtendsGraphicsPipelineCreateInfo for PipelineCompilerControlCreateI
 unsafe impl ExtendsGraphicsPipelineCreateInfo for PipelineCompilerControlCreateInfoAMD {}
 unsafe impl ExtendsComputePipelineCreateInfo for PipelineCompilerControlCreateInfoAMDBuilder<'_> {}
 unsafe impl ExtendsComputePipelineCreateInfo for PipelineCompilerControlCreateInfoAMD {}
+pub unsafe trait ExtendsPipelineCompilerControlCreateInfoAMD {}
 impl<'a> ::std::ops::Deref for PipelineCompilerControlCreateInfoAMDBuilder<'a> {
     type Target = PipelineCompilerControlCreateInfoAMD;
     fn deref(&self) -> &Self::Target {
@@ -41279,6 +41517,7 @@ pub struct PhysicalDeviceCoherentMemoryFeaturesAMDBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceCoherentMemoryFeaturesAMDBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceCoherentMemoryFeaturesAMD {}
+pub unsafe trait ExtendsPhysicalDeviceCoherentMemoryFeaturesAMD {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceCoherentMemoryFeaturesAMDBuilder<'a> {
     type Target = PhysicalDeviceCoherentMemoryFeaturesAMD;
     fn deref(&self) -> &Self::Target {
@@ -41459,6 +41698,7 @@ pub struct SamplerCustomBorderColorCreateInfoEXTBuilder<'a> {
 }
 unsafe impl ExtendsSamplerCreateInfo for SamplerCustomBorderColorCreateInfoEXTBuilder<'_> {}
 unsafe impl ExtendsSamplerCreateInfo for SamplerCustomBorderColorCreateInfoEXT {}
+pub unsafe trait ExtendsSamplerCustomBorderColorCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for SamplerCustomBorderColorCreateInfoEXTBuilder<'a> {
     type Target = SamplerCustomBorderColorCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -41521,6 +41761,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceCustomBorderColorPropertiesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceCustomBorderColorPropertiesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceCustomBorderColorPropertiesEXTBuilder<'a> {
     type Target = PhysicalDeviceCustomBorderColorPropertiesEXT;
     fn deref(&self) -> &Self::Target {
@@ -41581,6 +41822,7 @@ pub struct PhysicalDeviceCustomBorderColorFeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceCustomBorderColorFeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceCustomBorderColorFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceCustomBorderColorFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceCustomBorderColorFeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceCustomBorderColorFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -43030,6 +43272,7 @@ pub struct PhysicalDeviceExtendedDynamicStateFeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceExtendedDynamicStateFeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceExtendedDynamicStateFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceExtendedDynamicStateFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceExtendedDynamicStateFeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceExtendedDynamicStateFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -43085,6 +43328,7 @@ pub struct RenderPassTransformBeginInfoQCOMBuilder<'a> {
 }
 unsafe impl ExtendsRenderPassBeginInfo for RenderPassTransformBeginInfoQCOMBuilder<'_> {}
 unsafe impl ExtendsRenderPassBeginInfo for RenderPassTransformBeginInfoQCOM {}
+pub unsafe trait ExtendsRenderPassTransformBeginInfoQCOM {}
 impl<'a> ::std::ops::Deref for RenderPassTransformBeginInfoQCOMBuilder<'a> {
     type Target = RenderPassTransformBeginInfoQCOM;
     fn deref(&self) -> &Self::Target {
@@ -43142,6 +43386,7 @@ unsafe impl ExtendsBufferImageCopy2KHR for CopyCommandTransformInfoQCOMBuilder<'
 unsafe impl ExtendsBufferImageCopy2KHR for CopyCommandTransformInfoQCOM {}
 unsafe impl ExtendsImageBlit2KHR for CopyCommandTransformInfoQCOMBuilder<'_> {}
 unsafe impl ExtendsImageBlit2KHR for CopyCommandTransformInfoQCOM {}
+pub unsafe trait ExtendsCopyCommandTransformInfoQCOM {}
 impl<'a> ::std::ops::Deref for CopyCommandTransformInfoQCOMBuilder<'a> {
     type Target = CopyCommandTransformInfoQCOM;
     fn deref(&self) -> &Self::Target {
@@ -43205,6 +43450,7 @@ unsafe impl ExtendsCommandBufferInheritanceInfo
     for CommandBufferInheritanceRenderPassTransformInfoQCOM
 {
 }
+pub unsafe trait ExtendsCommandBufferInheritanceRenderPassTransformInfoQCOM {}
 impl<'a> ::std::ops::Deref for CommandBufferInheritanceRenderPassTransformInfoQCOMBuilder<'a> {
     type Target = CommandBufferInheritanceRenderPassTransformInfoQCOM;
     fn deref(&self) -> &Self::Target {
@@ -43264,6 +43510,7 @@ pub struct PhysicalDeviceDiagnosticsConfigFeaturesNVBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceDiagnosticsConfigFeaturesNVBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceDiagnosticsConfigFeaturesNV {}
+pub unsafe trait ExtendsPhysicalDeviceDiagnosticsConfigFeaturesNV {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceDiagnosticsConfigFeaturesNVBuilder<'a> {
     type Target = PhysicalDeviceDiagnosticsConfigFeaturesNV;
     fn deref(&self) -> &Self::Target {
@@ -43319,6 +43566,7 @@ pub struct DeviceDiagnosticsConfigCreateInfoNVBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for DeviceDiagnosticsConfigCreateInfoNVBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for DeviceDiagnosticsConfigCreateInfoNV {}
+pub unsafe trait ExtendsDeviceDiagnosticsConfigCreateInfoNV {}
 impl<'a> ::std::ops::Deref for DeviceDiagnosticsConfigCreateInfoNVBuilder<'a> {
     type Target = DeviceDiagnosticsConfigCreateInfoNV;
     fn deref(&self) -> &Self::Target {
@@ -43377,6 +43625,7 @@ unsafe impl ExtendsDeviceCreateInfo
 {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR {}
+pub unsafe trait ExtendsPhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHRBuilder<'a> {
     type Target = PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR;
     fn deref(&self) -> &Self::Target {
@@ -43442,6 +43691,7 @@ pub struct PhysicalDeviceRobustness2FeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceRobustness2FeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceRobustness2FeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceRobustness2FeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceRobustness2FeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceRobustness2FeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -43507,6 +43757,7 @@ pub struct PhysicalDeviceRobustness2PropertiesEXTBuilder<'a> {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceRobustness2PropertiesEXTBuilder<'_> {}
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceRobustness2PropertiesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceRobustness2PropertiesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceRobustness2PropertiesEXTBuilder<'a> {
     type Target = PhysicalDeviceRobustness2PropertiesEXT;
     fn deref(&self) -> &Self::Target {
@@ -43574,6 +43825,7 @@ pub struct PhysicalDeviceImageRobustnessFeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceImageRobustnessFeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceImageRobustnessFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceImageRobustnessFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceImageRobustnessFeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceImageRobustnessFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -43638,6 +43890,7 @@ unsafe impl ExtendsDeviceCreateInfo
 {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR {}
+pub unsafe trait ExtendsPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHRBuilder<'a> {
     type Target = PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR;
     fn deref(&self) -> &Self::Target {
@@ -43751,6 +44004,7 @@ pub struct PhysicalDevicePortabilitySubsetFeaturesKHRBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDevicePortabilitySubsetFeaturesKHRBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDevicePortabilitySubsetFeaturesKHR {}
+pub unsafe trait ExtendsPhysicalDevicePortabilitySubsetFeaturesKHR {}
 impl<'a> ::std::ops::Deref for PhysicalDevicePortabilitySubsetFeaturesKHRBuilder<'a> {
     type Target = PhysicalDevicePortabilitySubsetFeaturesKHR;
     fn deref(&self) -> &Self::Target {
@@ -43879,6 +44133,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDevicePortabilitySubsetPropertiesKHR {}
+pub unsafe trait ExtendsPhysicalDevicePortabilitySubsetPropertiesKHR {}
 impl<'a> ::std::ops::Deref for PhysicalDevicePortabilitySubsetPropertiesKHRBuilder<'a> {
     type Target = PhysicalDevicePortabilitySubsetPropertiesKHR;
     fn deref(&self) -> &Self::Target {
@@ -43940,6 +44195,7 @@ pub struct PhysicalDevice4444FormatsFeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDevice4444FormatsFeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDevice4444FormatsFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDevice4444FormatsFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDevice4444FormatsFeaturesEXTBuilder<'a> {
     type Target = PhysicalDevice4444FormatsFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -45001,6 +45257,7 @@ pub struct PhysicalDeviceShaderImageAtomicInt64FeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceShaderImageAtomicInt64FeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceShaderImageAtomicInt64FeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceShaderImageAtomicInt64FeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceShaderImageAtomicInt64FeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceShaderImageAtomicInt64FeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -45062,6 +45319,7 @@ pub struct FragmentShadingRateAttachmentInfoKHRBuilder<'a> {
 }
 unsafe impl ExtendsSubpassDescription2 for FragmentShadingRateAttachmentInfoKHRBuilder<'_> {}
 unsafe impl ExtendsSubpassDescription2 for FragmentShadingRateAttachmentInfoKHR {}
+pub unsafe trait ExtendsFragmentShadingRateAttachmentInfoKHR {}
 impl<'a> ::std::ops::Deref for FragmentShadingRateAttachmentInfoKHRBuilder<'a> {
     type Target = FragmentShadingRateAttachmentInfoKHR;
     fn deref(&self) -> &Self::Target {
@@ -45132,6 +45390,7 @@ unsafe impl ExtendsGraphicsPipelineCreateInfo
 {
 }
 unsafe impl ExtendsGraphicsPipelineCreateInfo for PipelineFragmentShadingRateStateCreateInfoKHR {}
+pub unsafe trait ExtendsPipelineFragmentShadingRateStateCreateInfoKHR {}
 impl<'a> ::std::ops::Deref for PipelineFragmentShadingRateStateCreateInfoKHRBuilder<'a> {
     type Target = PipelineFragmentShadingRateStateCreateInfoKHR;
     fn deref(&self) -> &Self::Target {
@@ -45195,6 +45454,7 @@ pub struct PhysicalDeviceFragmentShadingRateFeaturesKHRBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceFragmentShadingRateFeaturesKHRBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceFragmentShadingRateFeaturesKHR {}
+pub unsafe trait ExtendsPhysicalDeviceFragmentShadingRateFeaturesKHR {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceFragmentShadingRateFeaturesKHRBuilder<'a> {
     type Target = PhysicalDeviceFragmentShadingRateFeaturesKHR;
     fn deref(&self) -> &Self::Target {
@@ -45299,6 +45559,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
 {
 }
 unsafe impl ExtendsPhysicalDeviceProperties2 for PhysicalDeviceFragmentShadingRatePropertiesKHR {}
+pub unsafe trait ExtendsPhysicalDeviceFragmentShadingRatePropertiesKHR {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceFragmentShadingRatePropertiesKHRBuilder<'a> {
     type Target = PhysicalDeviceFragmentShadingRatePropertiesKHR;
     fn deref(&self) -> &Self::Target {
@@ -45563,6 +45824,7 @@ unsafe impl ExtendsDeviceCreateInfo
 {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceShaderTerminateInvocationFeaturesKHR {}
+pub unsafe trait ExtendsPhysicalDeviceShaderTerminateInvocationFeaturesKHR {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceShaderTerminateInvocationFeaturesKHRBuilder<'a> {
     type Target = PhysicalDeviceShaderTerminateInvocationFeaturesKHR;
     fn deref(&self) -> &Self::Target {
@@ -45625,6 +45887,7 @@ unsafe impl ExtendsDeviceCreateInfo
 {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceFragmentShadingRateEnumsFeaturesNV {}
+pub unsafe trait ExtendsPhysicalDeviceFragmentShadingRateEnumsFeaturesNV {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder<'a> {
     type Target = PhysicalDeviceFragmentShadingRateEnumsFeaturesNV;
     fn deref(&self) -> &Self::Target {
@@ -45701,6 +45964,7 @@ unsafe impl ExtendsPhysicalDeviceProperties2
     for PhysicalDeviceFragmentShadingRateEnumsPropertiesNV
 {
 }
+pub unsafe trait ExtendsPhysicalDeviceFragmentShadingRateEnumsPropertiesNV {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceFragmentShadingRateEnumsPropertiesNVBuilder<'a> {
     type Target = PhysicalDeviceFragmentShadingRateEnumsPropertiesNV;
     fn deref(&self) -> &Self::Target {
@@ -45767,6 +46031,7 @@ unsafe impl ExtendsGraphicsPipelineCreateInfo
 {
 }
 unsafe impl ExtendsGraphicsPipelineCreateInfo for PipelineFragmentShadingRateEnumStateCreateInfoNV {}
+pub unsafe trait ExtendsPipelineFragmentShadingRateEnumStateCreateInfoNV {}
 impl<'a> ::std::ops::Deref for PipelineFragmentShadingRateEnumStateCreateInfoNVBuilder<'a> {
     type Target = PipelineFragmentShadingRateEnumStateCreateInfoNV;
     fn deref(&self) -> &Self::Target {
@@ -45916,6 +46181,7 @@ unsafe impl ExtendsDeviceCreateInfo
 {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceMutableDescriptorTypeFeaturesVALVE {}
+pub unsafe trait ExtendsPhysicalDeviceMutableDescriptorTypeFeaturesVALVE {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder<'a> {
     type Target = PhysicalDeviceMutableDescriptorTypeFeaturesVALVE;
     fn deref(&self) -> &Self::Target {
@@ -46030,6 +46296,7 @@ unsafe impl ExtendsDescriptorSetLayoutCreateInfo
 unsafe impl ExtendsDescriptorSetLayoutCreateInfo for MutableDescriptorTypeCreateInfoVALVE {}
 unsafe impl ExtendsDescriptorPoolCreateInfo for MutableDescriptorTypeCreateInfoVALVEBuilder<'_> {}
 unsafe impl ExtendsDescriptorPoolCreateInfo for MutableDescriptorTypeCreateInfoVALVE {}
+pub unsafe trait ExtendsMutableDescriptorTypeCreateInfoVALVE {}
 impl<'a> ::std::ops::Deref for MutableDescriptorTypeCreateInfoVALVEBuilder<'a> {
     type Target = MutableDescriptorTypeCreateInfoVALVE;
     fn deref(&self) -> &Self::Target {
@@ -46092,6 +46359,7 @@ unsafe impl ExtendsDeviceCreateInfo
 {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceVertexInputDynamicStateFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceVertexInputDynamicStateFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceVertexInputDynamicStateFeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceVertexInputDynamicStateFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -46325,6 +46593,7 @@ pub struct PhysicalDeviceColorWriteEnableFeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceColorWriteEnableFeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceColorWriteEnableFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceColorWriteEnableFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceColorWriteEnableFeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceColorWriteEnableFeaturesEXT;
     fn deref(&self) -> &Self::Target {
@@ -46385,6 +46654,7 @@ unsafe impl ExtendsPipelineColorBlendStateCreateInfo
 {
 }
 unsafe impl ExtendsPipelineColorBlendStateCreateInfo for PipelineColorWriteCreateInfoEXT {}
+pub unsafe trait ExtendsPipelineColorWriteCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for PipelineColorWriteCreateInfoEXTBuilder<'a> {
     type Target = PipelineColorWriteCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -46447,6 +46717,7 @@ pub struct MemoryBarrier2KHRBuilder<'a> {
 }
 unsafe impl ExtendsSubpassDependency2 for MemoryBarrier2KHRBuilder<'_> {}
 unsafe impl ExtendsSubpassDependency2 for MemoryBarrier2KHR {}
+pub unsafe trait ExtendsMemoryBarrier2KHR {}
 impl<'a> ::std::ops::Deref for MemoryBarrier2KHRBuilder<'a> {
     type Target = MemoryBarrier2KHR;
     fn deref(&self) -> &Self::Target {
@@ -47117,6 +47388,7 @@ pub struct QueueFamilyCheckpointProperties2NVBuilder<'a> {
 }
 unsafe impl ExtendsQueueFamilyProperties2 for QueueFamilyCheckpointProperties2NVBuilder<'_> {}
 unsafe impl ExtendsQueueFamilyProperties2 for QueueFamilyCheckpointProperties2NV {}
+pub unsafe trait ExtendsQueueFamilyCheckpointProperties2NV {}
 impl<'a> ::std::ops::Deref for QueueFamilyCheckpointProperties2NVBuilder<'a> {
     type Target = QueueFamilyCheckpointProperties2NV;
     fn deref(&self) -> &Self::Target {
@@ -47249,6 +47521,7 @@ pub struct PhysicalDeviceSynchronization2FeaturesKHRBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceSynchronization2FeaturesKHRBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceSynchronization2FeaturesKHR {}
+pub unsafe trait ExtendsPhysicalDeviceSynchronization2FeaturesKHR {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceSynchronization2FeaturesKHRBuilder<'a> {
     type Target = PhysicalDeviceSynchronization2FeaturesKHR;
     fn deref(&self) -> &Self::Target {
@@ -47304,6 +47577,7 @@ pub struct VideoQueueFamilyProperties2KHRBuilder<'a> {
 }
 unsafe impl ExtendsQueueFamilyProperties2 for VideoQueueFamilyProperties2KHRBuilder<'_> {}
 unsafe impl ExtendsQueueFamilyProperties2 for VideoQueueFamilyProperties2KHR {}
+pub unsafe trait ExtendsVideoQueueFamilyProperties2KHR {}
 impl<'a> ::std::ops::Deref for VideoQueueFamilyProperties2KHRBuilder<'a> {
     type Target = VideoQueueFamilyProperties2KHR;
     fn deref(&self) -> &Self::Target {
@@ -47370,6 +47644,7 @@ unsafe impl ExtendsImageViewCreateInfo for VideoProfilesKHRBuilder<'_> {}
 unsafe impl ExtendsImageViewCreateInfo for VideoProfilesKHR {}
 unsafe impl ExtendsBufferCreateInfo for VideoProfilesKHRBuilder<'_> {}
 unsafe impl ExtendsBufferCreateInfo for VideoProfilesKHR {}
+pub unsafe trait ExtendsVideoProfilesKHR {}
 impl<'a> ::std::ops::Deref for VideoProfilesKHRBuilder<'a> {
     type Target = VideoProfilesKHR;
     fn deref(&self) -> &Self::Target {
@@ -47588,6 +47863,7 @@ unsafe impl ExtendsImageViewCreateInfo for VideoProfileKHRBuilder<'_> {}
 unsafe impl ExtendsImageViewCreateInfo for VideoProfileKHR {}
 unsafe impl ExtendsBufferCreateInfo for VideoProfileKHRBuilder<'_> {}
 unsafe impl ExtendsBufferCreateInfo for VideoProfileKHR {}
+pub unsafe trait ExtendsVideoProfileKHR {}
 impl<'a> ::std::ops::Deref for VideoProfileKHRBuilder<'a> {
     type Target = VideoProfileKHR;
     fn deref(&self) -> &Self::Target {
@@ -48225,6 +48501,7 @@ pub struct VideoDecodeH264ProfileEXTBuilder<'a> {
     inner: VideoDecodeH264ProfileEXT,
     marker: ::std::marker::PhantomData<&'a ()>,
 }
+pub unsafe trait ExtendsVideoDecodeH264ProfileEXT {}
 impl<'a> ::std::ops::Deref for VideoDecodeH264ProfileEXTBuilder<'a> {
     type Target = VideoDecodeH264ProfileEXT;
     fn deref(&self) -> &Self::Target {
@@ -48302,6 +48579,7 @@ pub struct VideoDecodeH264CapabilitiesEXTBuilder<'a> {
 }
 unsafe impl ExtendsVideoCapabilitiesKHR for VideoDecodeH264CapabilitiesEXTBuilder<'_> {}
 unsafe impl ExtendsVideoCapabilitiesKHR for VideoDecodeH264CapabilitiesEXT {}
+pub unsafe trait ExtendsVideoDecodeH264CapabilitiesEXT {}
 impl<'a> ::std::ops::Deref for VideoDecodeH264CapabilitiesEXTBuilder<'a> {
     type Target = VideoDecodeH264CapabilitiesEXT;
     fn deref(&self) -> &Self::Target {
@@ -48367,6 +48645,7 @@ pub struct VideoDecodeH264SessionCreateInfoEXTBuilder<'a> {
 }
 unsafe impl ExtendsVideoSessionCreateInfoKHR for VideoDecodeH264SessionCreateInfoEXTBuilder<'_> {}
 unsafe impl ExtendsVideoSessionCreateInfoKHR for VideoDecodeH264SessionCreateInfoEXT {}
+pub unsafe trait ExtendsVideoDecodeH264SessionCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for VideoDecodeH264SessionCreateInfoEXTBuilder<'a> {
     type Target = VideoDecodeH264SessionCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -48438,6 +48717,7 @@ unsafe impl ExtendsVideoSessionParametersUpdateInfoKHR
     for VideoDecodeH264SessionParametersAddInfoEXT
 {
 }
+pub unsafe trait ExtendsVideoDecodeH264SessionParametersAddInfoEXT {}
 impl<'a> ::std::ops::Deref for VideoDecodeH264SessionParametersAddInfoEXTBuilder<'a> {
     type Target = VideoDecodeH264SessionParametersAddInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -48509,6 +48789,7 @@ unsafe impl ExtendsVideoSessionParametersCreateInfoKHR
     for VideoDecodeH264SessionParametersCreateInfoEXT
 {
 }
+pub unsafe trait ExtendsVideoDecodeH264SessionParametersCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for VideoDecodeH264SessionParametersCreateInfoEXTBuilder<'a> {
     type Target = VideoDecodeH264SessionParametersCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -48579,6 +48860,7 @@ pub struct VideoDecodeH264PictureInfoEXTBuilder<'a> {
 }
 unsafe impl ExtendsVideoDecodeInfoKHR for VideoDecodeH264PictureInfoEXTBuilder<'_> {}
 unsafe impl ExtendsVideoDecodeInfoKHR for VideoDecodeH264PictureInfoEXT {}
+pub unsafe trait ExtendsVideoDecodeH264PictureInfoEXT {}
 impl<'a> ::std::ops::Deref for VideoDecodeH264PictureInfoEXTBuilder<'a> {
     type Target = VideoDecodeH264PictureInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -48639,6 +48921,7 @@ pub struct VideoDecodeH264DpbSlotInfoEXTBuilder<'a> {
 }
 unsafe impl ExtendsVideoReferenceSlotKHR for VideoDecodeH264DpbSlotInfoEXTBuilder<'_> {}
 unsafe impl ExtendsVideoReferenceSlotKHR for VideoDecodeH264DpbSlotInfoEXT {}
+pub unsafe trait ExtendsVideoDecodeH264DpbSlotInfoEXT {}
 impl<'a> ::std::ops::Deref for VideoDecodeH264DpbSlotInfoEXTBuilder<'a> {
     type Target = VideoDecodeH264DpbSlotInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -48695,6 +48978,7 @@ pub struct VideoDecodeH264MvcEXTBuilder<'a> {
     inner: VideoDecodeH264MvcEXT,
     marker: ::std::marker::PhantomData<&'a ()>,
 }
+pub unsafe trait ExtendsVideoDecodeH264MvcEXT {}
 impl<'a> ::std::ops::Deref for VideoDecodeH264MvcEXTBuilder<'a> {
     type Target = VideoDecodeH264MvcEXT;
     fn deref(&self) -> &Self::Target {
@@ -48762,6 +49046,7 @@ pub struct VideoDecodeH265ProfileEXTBuilder<'a> {
     inner: VideoDecodeH265ProfileEXT,
     marker: ::std::marker::PhantomData<&'a ()>,
 }
+pub unsafe trait ExtendsVideoDecodeH265ProfileEXT {}
 impl<'a> ::std::ops::Deref for VideoDecodeH265ProfileEXTBuilder<'a> {
     type Target = VideoDecodeH265ProfileEXT;
     fn deref(&self) -> &Self::Target {
@@ -48833,6 +49118,7 @@ pub struct VideoDecodeH265CapabilitiesEXTBuilder<'a> {
 }
 unsafe impl ExtendsVideoCapabilitiesKHR for VideoDecodeH265CapabilitiesEXTBuilder<'_> {}
 unsafe impl ExtendsVideoCapabilitiesKHR for VideoDecodeH265CapabilitiesEXT {}
+pub unsafe trait ExtendsVideoDecodeH265CapabilitiesEXT {}
 impl<'a> ::std::ops::Deref for VideoDecodeH265CapabilitiesEXTBuilder<'a> {
     type Target = VideoDecodeH265CapabilitiesEXT;
     fn deref(&self) -> &Self::Target {
@@ -48894,6 +49180,7 @@ pub struct VideoDecodeH265SessionCreateInfoEXTBuilder<'a> {
 }
 unsafe impl ExtendsVideoSessionCreateInfoKHR for VideoDecodeH265SessionCreateInfoEXTBuilder<'_> {}
 unsafe impl ExtendsVideoSessionCreateInfoKHR for VideoDecodeH265SessionCreateInfoEXT {}
+pub unsafe trait ExtendsVideoDecodeH265SessionCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for VideoDecodeH265SessionCreateInfoEXTBuilder<'a> {
     type Target = VideoDecodeH265SessionCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -48965,6 +49252,7 @@ unsafe impl ExtendsVideoSessionParametersUpdateInfoKHR
     for VideoDecodeH265SessionParametersAddInfoEXT
 {
 }
+pub unsafe trait ExtendsVideoDecodeH265SessionParametersAddInfoEXT {}
 impl<'a> ::std::ops::Deref for VideoDecodeH265SessionParametersAddInfoEXTBuilder<'a> {
     type Target = VideoDecodeH265SessionParametersAddInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -49036,6 +49324,7 @@ unsafe impl ExtendsVideoSessionParametersCreateInfoKHR
     for VideoDecodeH265SessionParametersCreateInfoEXT
 {
 }
+pub unsafe trait ExtendsVideoDecodeH265SessionParametersCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for VideoDecodeH265SessionParametersCreateInfoEXTBuilder<'a> {
     type Target = VideoDecodeH265SessionParametersCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -49106,6 +49395,7 @@ pub struct VideoDecodeH265PictureInfoEXTBuilder<'a> {
 }
 unsafe impl ExtendsVideoDecodeInfoKHR for VideoDecodeH265PictureInfoEXTBuilder<'_> {}
 unsafe impl ExtendsVideoDecodeInfoKHR for VideoDecodeH265PictureInfoEXT {}
+pub unsafe trait ExtendsVideoDecodeH265PictureInfoEXT {}
 impl<'a> ::std::ops::Deref for VideoDecodeH265PictureInfoEXTBuilder<'a> {
     type Target = VideoDecodeH265PictureInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -49169,6 +49459,7 @@ pub struct VideoDecodeH265DpbSlotInfoEXTBuilder<'a> {
 }
 unsafe impl ExtendsVideoReferenceSlotKHR for VideoDecodeH265DpbSlotInfoEXTBuilder<'_> {}
 unsafe impl ExtendsVideoReferenceSlotKHR for VideoDecodeH265DpbSlotInfoEXT {}
+pub unsafe trait ExtendsVideoDecodeH265DpbSlotInfoEXT {}
 impl<'a> ::std::ops::Deref for VideoDecodeH265DpbSlotInfoEXTBuilder<'a> {
     type Target = VideoDecodeH265DpbSlotInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -49865,6 +50156,7 @@ pub struct VideoEncodeRateControlInfoKHRBuilder<'a> {
 }
 unsafe impl ExtendsVideoCodingControlInfoKHR for VideoEncodeRateControlInfoKHRBuilder<'_> {}
 unsafe impl ExtendsVideoCodingControlInfoKHR for VideoEncodeRateControlInfoKHR {}
+pub unsafe trait ExtendsVideoEncodeRateControlInfoKHR {}
 impl<'a> ::std::ops::Deref for VideoEncodeRateControlInfoKHRBuilder<'a> {
     type Target = VideoEncodeRateControlInfoKHR;
     fn deref(&self) -> &Self::Target {
@@ -49967,6 +50259,7 @@ pub struct VideoEncodeH264CapabilitiesEXTBuilder<'a> {
 }
 unsafe impl ExtendsVideoCapabilitiesKHR for VideoEncodeH264CapabilitiesEXTBuilder<'_> {}
 unsafe impl ExtendsVideoCapabilitiesKHR for VideoEncodeH264CapabilitiesEXT {}
+pub unsafe trait ExtendsVideoEncodeH264CapabilitiesEXT {}
 impl<'a> ::std::ops::Deref for VideoEncodeH264CapabilitiesEXTBuilder<'a> {
     type Target = VideoEncodeH264CapabilitiesEXT;
     fn deref(&self) -> &Self::Target {
@@ -50069,6 +50362,7 @@ pub struct VideoEncodeH264SessionCreateInfoEXTBuilder<'a> {
 }
 unsafe impl ExtendsVideoSessionCreateInfoKHR for VideoEncodeH264SessionCreateInfoEXTBuilder<'_> {}
 unsafe impl ExtendsVideoSessionCreateInfoKHR for VideoEncodeH264SessionCreateInfoEXT {}
+pub unsafe trait ExtendsVideoEncodeH264SessionCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for VideoEncodeH264SessionCreateInfoEXTBuilder<'a> {
     type Target = VideoEncodeH264SessionCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -50144,6 +50438,7 @@ unsafe impl ExtendsVideoSessionParametersUpdateInfoKHR
     for VideoEncodeH264SessionParametersAddInfoEXT
 {
 }
+pub unsafe trait ExtendsVideoEncodeH264SessionParametersAddInfoEXT {}
 impl<'a> ::std::ops::Deref for VideoEncodeH264SessionParametersAddInfoEXTBuilder<'a> {
     type Target = VideoEncodeH264SessionParametersAddInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -50215,6 +50510,7 @@ unsafe impl ExtendsVideoSessionParametersCreateInfoKHR
     for VideoEncodeH264SessionParametersCreateInfoEXT
 {
 }
+pub unsafe trait ExtendsVideoEncodeH264SessionParametersCreateInfoEXT {}
 impl<'a> ::std::ops::Deref for VideoEncodeH264SessionParametersCreateInfoEXTBuilder<'a> {
     type Target = VideoEncodeH264SessionParametersCreateInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -50367,6 +50663,7 @@ pub struct VideoEncodeH264VclFrameInfoEXTBuilder<'a> {
 }
 unsafe impl ExtendsVideoEncodeInfoKHR for VideoEncodeH264VclFrameInfoEXTBuilder<'_> {}
 unsafe impl ExtendsVideoEncodeInfoKHR for VideoEncodeH264VclFrameInfoEXT {}
+pub unsafe trait ExtendsVideoEncodeH264VclFrameInfoEXT {}
 impl<'a> ::std::ops::Deref for VideoEncodeH264VclFrameInfoEXTBuilder<'a> {
     type Target = VideoEncodeH264VclFrameInfoEXT;
     fn deref(&self) -> &Self::Target {
@@ -50455,6 +50752,7 @@ pub struct VideoEncodeH264EmitPictureParametersEXTBuilder<'a> {
 }
 unsafe impl ExtendsVideoEncodeInfoKHR for VideoEncodeH264EmitPictureParametersEXTBuilder<'_> {}
 unsafe impl ExtendsVideoEncodeInfoKHR for VideoEncodeH264EmitPictureParametersEXT {}
+pub unsafe trait ExtendsVideoEncodeH264EmitPictureParametersEXT {}
 impl<'a> ::std::ops::Deref for VideoEncodeH264EmitPictureParametersEXTBuilder<'a> {
     type Target = VideoEncodeH264EmitPictureParametersEXT;
     fn deref(&self) -> &Self::Target {
@@ -50517,6 +50815,7 @@ pub struct VideoEncodeH264ProfileEXTBuilder<'a> {
     inner: VideoEncodeH264ProfileEXT,
     marker: ::std::marker::PhantomData<&'a ()>,
 }
+pub unsafe trait ExtendsVideoEncodeH264ProfileEXT {}
 impl<'a> ::std::ops::Deref for VideoEncodeH264ProfileEXTBuilder<'a> {
     type Target = VideoEncodeH264ProfileEXT;
     fn deref(&self) -> &Self::Target {
@@ -50705,6 +51004,7 @@ unsafe impl ExtendsDeviceCreateInfo
 {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceInheritedViewportScissorFeaturesNV {}
+pub unsafe trait ExtendsPhysicalDeviceInheritedViewportScissorFeaturesNV {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceInheritedViewportScissorFeaturesNVBuilder<'a> {
     type Target = PhysicalDeviceInheritedViewportScissorFeaturesNV;
     fn deref(&self) -> &Self::Target {
@@ -50767,6 +51067,7 @@ unsafe impl ExtendsCommandBufferInheritanceInfo
 {
 }
 unsafe impl ExtendsCommandBufferInheritanceInfo for CommandBufferInheritanceViewportScissorInfoNV {}
+pub unsafe trait ExtendsCommandBufferInheritanceViewportScissorInfoNV {}
 impl<'a> ::std::ops::Deref for CommandBufferInheritanceViewportScissorInfoNVBuilder<'a> {
     type Target = CommandBufferInheritanceViewportScissorInfoNV;
     fn deref(&self) -> &Self::Target {
@@ -50830,6 +51131,7 @@ pub struct PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXTBuilder<'a> {
 }
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXTBuilder<'_> {}
 unsafe impl ExtendsDeviceCreateInfo for PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT {}
+pub unsafe trait ExtendsPhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT {}
 impl<'a> ::std::ops::Deref for PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXTBuilder<'a> {
     type Target = PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT;
     fn deref(&self) -> &Self::Target {
